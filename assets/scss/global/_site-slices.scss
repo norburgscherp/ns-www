@@ -1,0 +1,244 @@
+
+/////////////////////////
+// SLICE - LAYOUTS
+///////////////////////
+
+  .slice-layout-two-col {
+    
+    .slice-body {}
+    .col {}
+    .col-1 {}
+    .col-2 {}
+
+    .slice-body {
+      &.-border-top {
+        position: relative;
+        &:before {
+          position: absolute;
+          content: '';
+          border-top: 1px solid $black;
+          display: block;
+          width: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    .slice-image {
+      margin-bottom: 15px;
+    }
+
+    .slice-text {
+      .header > * {
+        font-weight: 200;
+        font-size: 15px;
+        letter-spacing: .1em;
+        font-family: $font-copper;
+        margin: 0;
+        text-transform: uppercase;
+        display: inline-block;
+      }
+      .text {
+        font-size: 20px;
+        font-family: $font-caslon;
+        line-height: 1.4;
+        p {
+          margin: 0;
+          + p {
+            text-indent: 30px;
+          } 
+        }
+        i {
+          font-family: $font-caslon-fine;
+        }
+      }
+    }
+
+
+    @include MOBILE {
+      .slice-image {
+        @include aspect-ratio-img(1,1);
+      }
+    }
+
+    @include VP600 {
+      .slice-image {
+        margin-bottom: 30px;
+      }
+      .row {
+        @include clearfix();
+        margin:0 -8px;
+      }
+      .col { 
+        width: 50%;
+        float: left;
+        padding: 0 8px;
+      }
+    }
+
+    @include VP768 {
+      .row {
+        margin: 0 -15px;
+      }
+      .col { 
+        width: 50%;
+        float: left;
+        padding: 0 15px;
+      }
+    }
+
+    @include VP1024 {
+      .slice-text {
+        .text {
+          font-size: 22px;
+        }
+      }
+    }
+
+  }
+
+
+/////////////////////////
+// SLICES
+///////////////////////
+  
+// - - - HEADERS
+
+.slice-headers {
+  
+  text-align: center;
+
+  .header {
+    h1,
+    h2,
+    h3 {
+      display: inline-block;
+      font-family: $font-copper;
+      font-weight: 200;
+      font-size: 15px;
+      color: $black;
+      margin: 24px 0;
+      text-transform: uppercase;
+      border-bottom: 1px solid $black;
+      border-top: 1px solid $black;
+      padding: 8px 0 6px;
+      letter-spacing: .1em;
+     
+      width: 100%;
+     
+      line-height: 1
+    }   
+  }
+
+  @include VP480 {
+    .header {
+      h1 {
+        padding-left: 30px;
+        padding-right: 30px;
+        white-space: nowrap;
+        min-width: 380px;
+        width: auto
+      }
+    }
+  }
+
+}
+
+
+// - - - PERSONS
+
+.slice-persons {
+  @include clearfix();
+  @include VP480 {
+    margin: 0 -8px; 
+  }
+
+  .person{
+    margin-bottom: 20px;
+    text-align: center;
+    
+    figure {
+      margin-bottom: 18px;
+      background-color: $grey;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      color: $red;
+      font-weight: bold;
+      font-size: 11px;
+      font-family: $font-copper;
+      text-transform: uppercase;
+      min-height: 100px;
+      letter-spacing: .1em;
+      border: 1px solid $black;
+      @include aspect-ratio-img(288,384);
+
+      .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+
+    }
+
+    .name > *,
+    .designation > *,
+    .title > *{
+      font-weight: bold;
+      font-size: 11px;
+      font-family: $font-copper;
+      text-transform: uppercase;
+      line-height: 1.5;
+      letter-spacing: .1em;
+      
+    }
+
+    .designation > *,
+    .title > *{
+      font-weight: 200;
+    }
+
+    .link {
+      font-weight: 200;
+      font-size: 11px;
+      line-height: 1;
+      font-family: $font-copper;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      a {
+        color: $grey;
+        display: inline-block;
+        padding-top: 11px;
+      }
+      
+    }
+
+    @include VP480 {
+      width: 50%;
+      float: left;
+      padding: 0 8px 20px;
+    }
+
+    @include VP768 {
+      width: 33.333%;
+    }
+
+    @include VP1024 {
+      width: 25%;
+    }
+
+    @include VP1280 {
+      //width: 20%;
+    }
+
+  }
+
+ }
+
+
+
+
+

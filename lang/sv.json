@@ -1,0 +1,26 @@
+{
+  "ns": {
+    "more_info": "Mer info",
+    "no_image":"ingen bild",
+    "no_name":"inget namn",
+    "no_title":"ingen titel",
+    "no_link":"ingen länk",
+    "no_contact":"ingen kontakt info",
+    "our_people": "Medarbetare",
+    "contact": "Kontakt"
+  },
+  "links": {
+    "home": "Hem",
+    "about": "Om oss",
+    "english": "English version",
+    "french": "French version"
+  },
+  "home": {
+    "title": "Välkommen",
+    "introduction": "Det här är en introduction till Svenska."
+  },
+  "page": {
+    "title": "SVENSKA (static from json)",
+    "introduction": "Den här sidan är gjord för att ge dig mer infirmation."
+  }
+}

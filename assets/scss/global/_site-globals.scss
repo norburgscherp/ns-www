@@ -1,0 +1,218 @@
+
+//
+// SITE - GLOBALS
+//
+
+
+// - - - SELECTION
+
+::-moz-selection { background: $black; color:$white;}
+::selection { background: $black; color:$white;}
+
+// - - - BOX MODEL
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+// - - - GENERAL
+
+html {
+
+  /* Disable certain interactions on touch devices */
+  -webkit-touch-callout: none; 
+  -webkit-highlight: none; 
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  /* Prevent adjustments of font size after orientation changes */
+  -webkit-text-size-adjust: 100%;
+
+  /* Disable auto-enlargement of small text in Safari */
+  text-size-adjust: 100%;
+
+  /* Make type rendering look crisper */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Enable kerning and optional ligatures */
+  text-rendering: optimizeLegibility;
+
+}
+
+body {
+	margin: 0;
+  background-color: $white;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-style: none;
+}
+
+p {
+  margin: 0 0 1em
+}
+
+figure {
+  margin: 0;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+
+// - -  SITE
+
+.site-width {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 15px; 
+  padding-right: 15px; 
+  min-width: 300px;
+
+  @media screen and (min-width: 768px)  {
+    padding-left: 25px; 
+    padding-right: 25px;  
+  }
+
+  // 1280px
+  @media screen and (min-width: 1280px)  {
+    padding-left: 40px; 
+    padding-right: 40px; 
+  }
+
+}
+
+.site-content-width {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+[class*="site-page"]  {
+  padding-top: 80px;
+
+  // 1280px
+  @media screen and (min-width: 1280px)  {
+   padding-top: 133px;
+  }
+
+}
+
+
+
+
+
+
+// - - SITE CONTENT
+
+  .site-content {
+
+    ul,ol {
+      margin-top: 0;
+      li {
+        margin-bottom: .44em;
+      }
+    }
+
+    h2,h3 {
+      margin-top: .44em;
+    }
+
+    .header-styling,
+     .header-styling * {
+      line-height: 1.256;
+      margin: 0;
+      font-size: 24px;
+      font-family: $font-impact;
+      text-transform: uppercase;
+      a {
+        text-decoration: none;
+        color: $grey;
+        &:hover {
+          color: $grey;
+        }
+      }
+    }
+    .text {
+      strong {
+        font-family: $font-impact;
+        color: $grey;
+      }
+    }
+
+
+    .content-link {
+        display: block;
+        text-decoration: none;
+        &:after {
+          content: '>';
+          display: inline-block;
+          padding: 0 0 0 4px;
+          position: relative;
+          top: 2px;
+        }
+        &:hover {
+          color: $grey;
+        }
+    }
+
+    
+
+    // TABLET
+    @include VP768  {
+     
+      .header-styling,
+      .header-styling * {
+        font-size: 26px;
+      }
+  
+    }
+
+    // DESKTOP
+    @include VP1280  {
+      .header-styling,
+      .header-styling * {
+        font-size: 28px;
+      }
+    }
+
+  }
+
+
+// - - - SLICE / SECTION
+
+[class^="slice-"],
+[class^="s-"]  {
+
+  //padding: 48px 0;
+  position: relative;
+
+  // 768px
+  @media screen and (min-width: 768px)  {
+    //padding: 72px 0;
+  }
+
+  // 1280px
+  @media screen and (min-width: 1280px)  {
+   // padding: 96px 0;
+  }
+
+}
+
+
+
+
+

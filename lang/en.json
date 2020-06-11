@@ -1,0 +1,26 @@
+{
+  "ns": {
+    "more_info": "More info",
+    "no_image":"no image",
+    "no_name":"no name",
+    "no_title":"no title",
+    "no_link":"no link",
+    "no_contact":"no contact info",
+    "our_people": "Our people",
+    "contact": "Contact"
+  },
+  "links": {
+    "home": "Home",
+    "about": "About",
+    "english": "English version",
+    "french": "French version"
+  },
+  "home": {
+    "title": "Welcome",
+    "introduction": "This is an introduction in English."
+  },
+  "page": {
+    "title": "ENGLISH (static from json)",
+    "introduction": "This page is made to give you more informations."
+  }
+}
