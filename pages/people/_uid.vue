@@ -152,7 +152,8 @@ export default {
           font-size: 20px;
           font-family: $font-caslon;
           line-height: 1.5;
-          margin: 0;
+          margin: 0 auto;
+          max-width: 500px;
           &.person-text {
             max-width: 500px;
             text-align: left;

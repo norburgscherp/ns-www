@@ -104,6 +104,20 @@ export default {
 <style lang="scss">
 
 .site-page-people {
+  
+  .slice-persons {
+    margin: 0 -7px; 
+    position: relative;
+
+    .person {
+      width: 50%;
+      float: left;
+      padding: 0 7px 25px;
+      @include VP768 {
+        width: 33.3%;
+      }
+    }
+  }
 
 }
   

@@ -251,7 +251,7 @@ export default {
       cursor: pointer;
 
       border-bottom: 1px solid $grey;
-      padding: 11px 0 12px;
+      padding: 12px 0 9px;
       color: $grey;
 
       &:hover {

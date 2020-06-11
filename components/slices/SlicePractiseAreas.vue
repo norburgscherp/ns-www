@@ -57,9 +57,9 @@
                     <template v-if="person.data.name.length > 0 ">
                       <prismic-rich-text class="title" :field="person.data.name"/>
                     </template>
-                    <template v-else>
+                    <div v-else class="title">
                        ({{ $t('ns.no_image') }})
-                    </template>
+                    </div>
                   </figure>
 
                   <!-- NAME -->
