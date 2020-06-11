@@ -4,7 +4,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/510a4ab2-063f-4de1-b949-7bb8952b46cb/deploy-status)](https://app.netlify.com/sites/norburgscherp/deploys)
 
 
-# Norburg & scherp
+# Norburg & Scherp
 A static generated website. 
 
 ## Netlify
