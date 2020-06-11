@@ -1,9 +1,23 @@
 
 
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/510a4ab2-063f-4de1-b949-7bb8952b46cb/deploy-status)](https://app.netlify.com/sites/norburgscherp/deploys)
+
+
 # NS
 
+## Netlify
+Auto deploys
+[norburgscherp.netlify.app](https://norburgscherp.netlify.app/)
 
+## Prismic.io
+CMS
+[prismic.io](https://prismic.io/)
+
+## Development
+Nuxt JS -> [nuxtjs.org](https://nuxtjs.org/)
+@nuxtjs/prismic -> [prismic-nuxt.js.org](https://prismic-nuxt.js.org/)
+nuxt-i18n -> [Docs](https://nuxt-community.github.io/nuxt-i18n/), [Git](https://github.com/nuxt-community/nuxt-i18n)
 
 
 ## Launch this project in your local environment
