@@ -1,9 +1,9 @@
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d6a0ccf7-b5d1-4588-b628-84819681c478/deploy-status)](https://app.netlify.com/sites/at-lab-nuxt-prismic-i18n/deploys)
 
-# Active talents lab - Prismic / Nuxt - i18n 
 
-> [Demo](at-lab-nuxt-prismic-i18n.netlify.app/) 
+# NS
+
+
 
 
 ## Launch this project in your local environment
