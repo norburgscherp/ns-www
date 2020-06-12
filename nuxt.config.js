@@ -9,8 +9,6 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Norburg & Scherp' },
-      { name: 'keywords', content: 'Norburg & Scherp'},
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -52,6 +50,8 @@ export default {
     '@nuxtjs/prismic',
     '@nuxtjs/style-resources',
     '@nuxtjs/svg-sprite',
+    
+    'nuxt-purgecss',
     ['@nuxtjs/dotenv', { systemvars: true }],
     ['nuxt-i18n', {
       lazy: true,
@@ -91,12 +91,31 @@ export default {
       //
       // store/index.js
       // components/HeaderPrismic.js -> "MENU"
-      // pages/*/*.vue -> "ASYNC GET CONTENT" 
+      // page/pages/**/*.vue -> "ASYNC GET CONTENT" 
+      // page/people/*/*.vue -> "ASYNC GET CONTENT" 
       // plugins/i18n.js
       // lang/*.json
 
-   }]
+   }],
+   // '@nuxtjs/robots',
+   // '@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+    hostname: 'https://beta.norburgscherp.se/',
+    exclude: [
+      '/en/qa',
+      '/sv/qa',
+      '/en/styleguide',
+      '/sv/styleguide',
+      '/en/styleguide-videos',
+      '/sv/styleguide-videos',
+      '/sv/prismic-all-dynamic-routes',
+      '/en/prismic-all-dynamic-routes',
+      '/EN/preview',
+      '/sv/preview'
+    ]
+  },
 
   prismic: {
     endpoint: 'https://norburg-and-scherp.cdn.prismic.io/api/v2',
