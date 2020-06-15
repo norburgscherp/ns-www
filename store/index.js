@@ -1,3 +1,11 @@
+
+//
+// VUEX - STORE
+//
+
+
+// STATE
+
 export const state = () => ({
   menu: false,
   menu_en: {},
@@ -5,6 +13,9 @@ export const state = () => ({
   footer_en: {},
   footer_sv: {},
 })
+
+
+// MUTATIONS
 
 export const mutations = {
   SET_MENU_EN(state, menu) {
@@ -27,6 +38,9 @@ export const mutations = {
   }
 }
 
+
+// ACTIONS
+
 export const actions = {
   async fetchContent({ commit }, $prismic) {
 
@@ -47,18 +61,19 @@ export const actions = {
       commit('SET_FOOTER_SV', footer_sv)
 
     } catch (e) {
-      
       commit('SET_ERROR', e);
-
     }
+
   },
   SET_MENU(vuexContext, res) {
     vuexContext.commit('SET_MENU', res)
   }
 }
 
+
+// GETTERS
+
 export const getters = {
-  
   GET_MENU_EN(state) {
     return state.menu_en
   },

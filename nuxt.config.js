@@ -87,35 +87,19 @@ export default {
       }
 
       //
-      // i18n -> TOUCHED FILES
+      // i18n -> FYI -> TOUCHED FILES
       //
-      // store/index.js
-      // components/HeaderPrismic.js -> "MENU"
-      // page/pages/**/*.vue -> "ASYNC GET CONTENT" 
-      // page/people/*/*.vue -> "ASYNC GET CONTENT" 
-      // plugins/i18n.js
-      // lang/*.json
+      // - store/index.js
+      // - components/HeaderPrismic.js -> "MENU"
+      // - components/FooterPrismic.js -> "TEXT & LOGOS"
+      // - page/pages/**/*.vue -> "ASYNC GET CONTENT" 
+      // - page/people/*/*.vue -> "ASYNC GET CONTENT"
+      // - layouts/default.vue -> "SEO - META - SETUP"  
+      // - plugins/i18n.js
+      // - lang/*.json
 
    }],
-   // '@nuxtjs/robots',
-   // '@nuxtjs/sitemap'
   ],
-
-  sitemap: {
-    hostname: 'https://beta.norburgscherp.se/',
-    exclude: [
-      '/en/qa',
-      '/sv/qa',
-      '/en/styleguide',
-      '/sv/styleguide',
-      '/en/styleguide-videos',
-      '/sv/styleguide-videos',
-      '/sv/prismic-all-dynamic-routes',
-      '/en/prismic-all-dynamic-routes',
-      '/EN/preview',
-      '/sv/preview'
-    ]
-  },
 
   prismic: {
     endpoint: 'https://norburg-and-scherp.cdn.prismic.io/api/v2',
@@ -141,7 +125,6 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      // to transform link with <nuxt-link> for the htmlSerializer
       config.resolve.alias['vue'] = 'vue/dist/vue.common'
     }
   },

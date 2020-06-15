@@ -1,11 +1,13 @@
 <template>
   <section class="site-page-people site-width">
     
+
     <section class="slice-headers">
       <div class="site-content-width">
         <prismic-rich-text class="header" :field="people.title"/>
       </div>
     </section>
+
 
     <section class="slice-persons" v-match-heights="{el: ['.person'] }">
    

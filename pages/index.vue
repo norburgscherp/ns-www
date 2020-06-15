@@ -10,13 +10,11 @@
 <script>
 
 import Banner from '~/components/part/StartpageBanner.vue'
-import Slices from '~/components/SiteSlices.vue'
 
 export default {
   name: 'Home',
   components: {
-    Banner,
-    Slices
+    Banner
   },
   async asyncData({ $prismic, error, app}) {
  
@@ -31,8 +29,7 @@ export default {
       }
     
       return {
-        banner: startpage.startpage_banner[0],
-        slices: startpage.page_content
+        banner: startpage.startpage_banner[0]
       }
 
     } catch (e) {
@@ -44,8 +41,3 @@ export default {
 </script>
 
 
-<style lang="scss">
-
-
-
-</style>

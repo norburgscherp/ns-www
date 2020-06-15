@@ -26,10 +26,10 @@
           <!-- ACCORDION - SAID -->
           <div class="slice-accordion">
 
-            <!-- A-ITEM -->
+           
             <div class="acoordion-item -said">
 
-              <!-- A-HEADER -->
+              
               <section class="accordion-header" @click="showSaid = !showSaid" :class="{'-active' : showSaid}">
                 <prismic-rich-text class="header" :field="slice.primary.accordions_1_header"/>
               </section>
@@ -45,15 +45,14 @@
                 </div>
               </template>
 
-              <!-- A-TEXT -->
               
 
             </div>
 
-            <!-- A-ITEM - LINK -->
+            
             <div class="acoordion-item -link">
 
-              <!-- A-HEADER -->
+              
               <section class="accordion-header" @click="showLinks = !showLinks" :class="{'-active' : showLinks}">
                 <prismic-rich-text class="header" :field="slice.primary.accordion_2_header"/>
               </section>

@@ -1,7 +1,6 @@
 <template>
   <section class="slice-career slice-layout-two-col">
 
-
     <div class="slice-body row">
 
        <!-- COL-1 -->

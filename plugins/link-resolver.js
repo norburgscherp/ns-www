@@ -4,7 +4,8 @@
  */
 
 export default function (doc) {
-
+  
+  // Making "lang" work with i18n
   let lang = doc.lang.substring(0, 2)
 
   if (doc.isBroken) {
@@ -17,10 +18,9 @@ export default function (doc) {
 
   if (doc.type === 'page') {
     return '/' + lang + '/page/' + doc.uid
-    //return '/page/' + doc.uid
   }
 
-   if (doc.type === 'people') {
+  if (doc.type === 'people') {
     return '/' + lang + '/people/'
   }
 

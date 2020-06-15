@@ -49,11 +49,6 @@
 
 <script>
 
-const QuoteSlice = () => import("./slices/QuoteSlice.vue");
-const FullWidthImage = () => import("./slices/FullWidthImage.vue");
-const ImageGallery = () => import("./slices/ImageGallery.vue");
-const ImageHighlight = () => import("./slices/ImageHighlight.vue");
-
 const SliceHeaders = () => import("./slices/SliceHeaders.vue");
 const SliceText = () => import("./slices/SliceText.vue");
 const SliceImage = () => import("./slices/SliceImage.vue");
@@ -75,13 +70,7 @@ export default {
     SliceUpdate,
     SliceCareer,
     SliceAbout,
-    SlicePractiseAreas,
-
-
-    QuoteSlice,
-    FullWidthImage,
-    ImageGallery,
-    ImageHighlight
+    SlicePractiseAreas
   },
 }
 </script>

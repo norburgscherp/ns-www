@@ -80,9 +80,7 @@
 
                   <!-- LINK -->
                   <div class="link" @click.prevent="toggleContactDetails(index)">
-                    <!-- <nuxt-link :to="localePath('/people/'+person.uid+'')"> </nuxt-link> -->
-                      {{ $t('ns.contact') }}
-                   
+                    {{ $t('ns.contact') }}
                   </div>
 
 
@@ -91,7 +89,6 @@
                     <div class="arrow"></div>
                     <div class="info">
                       <prismic-rich-text :field="person.data.contact"/>
-                      <!-- <h3>{{person.data.contact[0].text}}</h3> -->
                     </div>
                   </div>
                   <div v-else class="contact">
@@ -672,21 +669,6 @@ export default {
           }
 
         }
-
-      }
-
-      &.-show-person-contact {
-
-
-
-        // VP768
-        // .contact {
-        //  border-top: 1px solid $black;
-        // }
-        // .person {
-        //   padding-bottom: 5em;
-        //   position: relative;
-        // }
 
       }
 

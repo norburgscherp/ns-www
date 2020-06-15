@@ -58,8 +58,6 @@ export default {
 
 <style lang="scss">
 
-.site-page {
- 
-}
+.site-page {}
   
 </style>

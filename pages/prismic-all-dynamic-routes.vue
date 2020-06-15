@@ -1,5 +1,4 @@
 
-
 <template>
 
   <div class="prismic-all-dynamic-routes" >
@@ -23,12 +22,9 @@
 
 <script>
 
-
 export default {
   name: 'prsimic-all-dynamic-routes',
-  layout: 'placeholder',
-
-  // @nuxt/prismuc-nuxt   
+  layout: 'dynamic-routes',
 
   async asyncData({ params, $prismic, error}) {
    

@@ -51,7 +51,6 @@ export default {
       margin-top: 90px;
       .text {
         display: inline-block;
-        // font-size: 18px;
       }
     }
 

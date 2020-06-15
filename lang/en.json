@@ -8,19 +8,5 @@
     "no_contact":"no contact info",
     "our_people": "Our people",
     "contact": "Contact"
-  },
-  "links": {
-    "home": "Home",
-    "about": "About",
-    "english": "English version",
-    "french": "French version"
-  },
-  "home": {
-    "title": "Welcome",
-    "introduction": "This is an introduction in English."
-  },
-  "page": {
-    "title": "ENGLISH (static from json)",
-    "introduction": "This page is made to give you more informations."
   }
 }
