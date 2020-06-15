@@ -19,8 +19,6 @@ $bp-1920:                               1920px !default;
 
 // CONTENT MIXINS
 
-//  @if $SG {...  } @else { ... }
-
 // Viewport
 @mixin VP320                            {                                @content;} 
 @mixin VP370                            {  @include media-min($bp-370)  {@content;} }  
