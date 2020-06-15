@@ -1,0 +1,81 @@
+{
+  "Main" : {
+    "internal_name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading6",
+        "label" : "Internal name"
+      }
+    },
+    "text" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "Footer - Text"
+      }
+    },
+    "text_short" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "Footer - Text short / Mobile"
+      }
+    },
+    "grey_text" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, hyperlink",
+        "label" : "Footer - Grey text"
+      }
+    },
+    "grey_text_short" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "Footer - Grey text short / Mobile"
+      }
+    },
+    "logos" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "image" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : {
+                "height" : 110
+              },
+              "thumbnails" : [ ],
+              "label" : "Image"
+            }
+          },
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "label" : "External link",
+              "allowTargetBlank" : true
+            }
+          }
+        },
+        "label" : "Footer - Logos"
+      }
+    },
+    "seo_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "SEO - Description"
+      }
+    },
+    "seo_keywords" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "SEO - Keywords"
+      }
+    }
+  }
+}

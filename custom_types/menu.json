@@ -1,33 +1,63 @@
 {
   "Main" : {
-    "title" : {
+    "menu_item" : {
       "type" : "StructuredText",
       "config" : {
-        "placeholder" : "Menu title...",
-        "single" : "heading1"
+        "multi" : "paragraph",
+        "label" : "Menu name"
       }
     },
-    "menu_links" : {
-      "type" : "Group",
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
       "config" : {
-        "fields" : {
-          "label" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "paragraph",
-              "label" : "Link Label",
-              "placeholder" : "Link Label..."
-            }
-          },
-          "link" : {
-            "type" : "Link",
-            "config" : {
-              "label" : "Link",
-              "placeholder" : "Select a Link..."
+        "labels" : {
+          "menu_item" : [ ]
+        },
+        "choices" : {
+          "menu_item" : {
+            "type" : "Slice",
+            "fieldset" : "Menu item",
+            "description" : "Menu Item with Sub Menu",
+            "icon" : "insert_link",
+            "display" : "list",
+            "non-repeat" : {
+              "label" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "allowTargetBlank" : true,
+                  "label" : "Label",
+                  "placeholder" : "Enter Link Label..."
+                }
+              },
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Link",
+                  "placeholder" : "Select link..."
+                }
+              }
+            },
+            "repeat" : {
+              "sub_menu_link_label" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Sub Menu Link Label",
+                  "placeholder" : "Enter Sub Menu Link Label..."
+                }
+              },
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Link",
+                  "placeholder" : "Select link..."
+                }
+              }
             }
           }
-        },
-        "label" : "Menu Links"
+        }
       }
     }
   }

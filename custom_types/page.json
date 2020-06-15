@@ -3,188 +3,338 @@
     "uid" : {
       "type" : "UID",
       "config" : {
-        "placeholder" : "meaningful-unique-identifier...",
-        "label" : "Unique ID"
+        "label" : "Name in url",
+        "placeholder" : "Name in url"
       }
     },
-    "page_content" : {
+    "body" : {
       "type" : "Slices",
       "fieldset" : "Slice zone",
       "config" : {
         "labels" : {
-          "text_section" : [ {
-            "name" : "1col",
-            "display" : "1 Column"
-          }, {
-            "name" : "2col",
-            "display" : "2 Columns"
-          } ]
+          "header" : [ ],
+          "contact" : [ ],
+          "update" : [ ],
+          "person" : [ ],
+          "career_general_text" : [ ],
+          "practice_areas" : [ ],
+          "about" : [ ]
         },
         "choices" : {
-          "text_section" : {
+          "header" : {
             "type" : "Slice",
-            "fieldset" : "Text Section",
-            "description" : "Simple text section with either one or two columns",
+            "fieldset" : "Header",
+            "description" : "Page top and and content headers",
+            "icon" : "font_download",
+            "display" : "list",
+            "non-repeat" : {
+              "header" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3",
+                  "label" : "Header"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "text" : {
+            "type" : "Slice",
+            "fieldset" : "Text",
+            "description" : "Text -> Bold, Italic and Lists",
             "icon" : "text_fields",
+            "display" : "list",
             "non-repeat" : {
-              "rich_text" : {
+              "text" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
-                  "label" : "Rich Text",
-                  "placeholder" : "Text..."
+                  "multi" : "paragraph, strong, em, hyperlink, list-item, o-list-item, o-list-item",
+                  "allowTargetBlank" : true,
+                  "label" : "Text"
                 }
               }
             },
             "repeat" : { }
           },
-          "quote" : {
+          "image" : {
             "type" : "Slice",
-            "fieldset" : "Quote",
-            "description" : "A stylized quote",
-            "icon" : "format_quote",
-            "non-repeat" : {
-              "quote_text" : {
-                "type" : "StructuredText",
-                "config" : {
-                  "single" : "paragraph",
-                  "label" : "Quote Text"
-                }
-              }
-            },
-            "repeat" : { }
-          },
-          "full_width_image" : {
-            "type" : "Slice",
-            "fieldset" : "Full Width Image",
-            "description" : "A wide, thin image",
-            "icon" : "broken_image",
-            "non-repeat" : {
-              "image" : {
-                "type" : "Image",
-                "config" : {
-                  "constraint" : {
-                    "width" : 980,
-                    "height" : 300
-                  },
-                  "thumbnails" : [ ],
-                  "label" : "Image"
-                }
-              }
-            },
-            "repeat" : { }
-          },
-          "image_gallery" : {
-            "type" : "Slice",
-            "fieldset" : "Image Gallery",
-            "description" : "A collection of images, each with a description and an optional link",
+            "fieldset" : "Image",
+            "description" : "Full width image (Can be a schema) ",
             "icon" : "image",
+            "display" : "list",
             "non-repeat" : {
-              "gallery_title" : {
-                "type" : "StructuredText",
-                "config" : {
-                  "single" : "heading2, heading3",
-                  "label" : "Gallery Title",
-                  "placeholder" : "Image Gallery Title...",
-                  "isEverythingAuthorized" : false,
-                  "authorized" : [ "heading2", "heading3", "text" ],
-                  "isAuthorized" : { }
-                }
-              }
-            },
-            "repeat" : {
-              "image_description" : {
-                "type" : "StructuredText",
-                "config" : {
-                  "single" : "paragraph",
-                  "label" : "Image Description",
-                  "placeholder" : "Image description...",
-                  "isEverythingAuthorized" : false,
-                  "authorized" : [ "paragraph", "text" ],
-                  "isAuthorized" : { }
-                }
-              },
-              "link" : {
-                "type" : "Link",
-                "config" : {
-                  "label" : "Link",
-                  "placeholder" : "Optional Link"
-                }
-              },
-              "link_label" : {
-                "type" : "StructuredText",
-                "config" : {
-                  "single" : "paragraph",
-                  "label" : "Link Label",
-                  "placeholder" : "Optional Link Label",
-                  "isEverythingAuthorized" : false,
-                  "authorized" : [ "paragraph", "text" ],
-                  "isAuthorized" : { }
-                }
-              },
               "image" : {
                 "type" : "Image",
                 "config" : {
                   "constraint" : {
-                    "width" : 727,
-                    "height" : 402
+                    "width" : 1080
+                  },
+                  "thumbnails" : [ {
+                    "name" : "tablet",
+                    "width" : 740,
+                    "height" : null
+                  }, {
+                    "name" : "mobile",
+                    "width" : 452,
+                    "height" : null
+                  } ],
+                  "label" : "Image"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "contact" : {
+            "type" : "Slice",
+            "fieldset" : "Contact",
+            "description" : "Copper text uppercase, centerd. For Contact page",
+            "icon" : "phone",
+            "display" : "list",
+            "non-repeat" : {
+              "text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "text"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "update" : {
+            "type" : "Slice",
+            "fieldset" : "Updates",
+            "description" : "Update / News teaser. For Update page",
+            "icon" : "tap_and_play",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 600
                   },
                   "thumbnails" : [ ],
                   "label" : "Image"
+                }
+              },
+              "image_focus" : {
+                "type" : "Select",
+                "config" : {
+                  "options" : [ "center top", "left top", "right top", "center center", "left center", "right center", "center bottom", "left bottom", "right bottom" ],
+                  "default_value" : "center top",
+                  "label" : "Image focus",
+                  "placeholder" : "Choose focus point in image"
+                }
+              },
+              "header" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3, heading4, heading5",
+                  "label" : "Header"
+                }
+              },
+              "text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em, hyperlink",
+                  "label" : "text"
                 }
               }
             }
           },
-          "image_highlight" : {
+          "career_general_text" : {
             "type" : "Slice",
-            "fieldset" : "Image Highlight",
-            "description" : "A section to highlight an image with title, text, and optional link",
-            "icon" : "star",
+            "fieldset" : "Career",
+            "description" : "Add job openings to the page",
+            "icon" : "local_play",
+            "display" : "list",
             "non-repeat" : {
-              "featured_image" : {
+              "header" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3, heading4, heading5",
+                  "label" : "General header (Not shown if job openings is added)"
+                }
+              },
+              "text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em, hyperlink",
+                  "allowTargetBlank" : true,
+                  "label" : "General text (Not shown if job openings is added)"
+                }
+              },
+              "image" : {
                 "type" : "Image",
                 "config" : {
                   "constraint" : {
-                    "width" : 727,
-                    "height" : 402
+                    "width" : 625
                   },
                   "thumbnails" : [ ],
-                  "label" : "Featured Image"
-                }
-              },
-              "title" : {
-                "type" : "StructuredText",
-                "config" : {
-                  "single" : "heading2",
-                  "label" : "Image Title",
-                  "placeholder" : "Featured Title..."
-                }
-              },
-              "headline" : {
-                "type" : "StructuredText",
-                "config" : {
-                  "single" : "heading3",
-                  "label" : "Image Headline",
-                  "placeholder" : "Featured Headline..."
-                }
-              },
-              "link" : {
-                "type" : "Link",
-                "config" : {
-                  "label" : "Featured Link",
-                  "placeholder" : "Optional Link"
-                }
-              },
-              "link_label" : {
-                "type" : "StructuredText",
-                "config" : {
-                  "single" : "paragraph",
-                  "label" : "Featured Link Label",
-                  "placeholder" : "Optional Link Label"
+                  "label" : "image"
                 }
               }
             },
-            "repeat" : { }
+            "repeat" : {
+              "header" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3, heading4, heading5",
+                  "label" : "Job opening - Header"
+                }
+              },
+              "job_opening" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em, hyperlink",
+                  "allowTargetBlank" : true,
+                  "label" : "Job opening - Text"
+                }
+              }
+            }
+          },
+          "practice_areas" : {
+            "type" : "Slice",
+            "fieldset" : "Practice areas",
+            "description" : "Image, Text and Quote",
+            "icon" : "bookmark_border",
+            "display" : "list",
+            "non-repeat" : {
+              "header" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2, heading3, heading4",
+                  "label" : "Header"
+                }
+              },
+              "text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em, hyperlink",
+                  "allowTargetBlank" : true,
+                  "label" : "text"
+                }
+              },
+              "quote" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Quote - Text"
+                }
+              },
+              "quote_note" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Quote note"
+                }
+              },
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 625
+                  },
+                  "thumbnails" : [ ],
+                  "label" : "image"
+                }
+              },
+              "contact_header" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2, heading3, heading4",
+                  "label" : "Contact header"
+                }
+              }
+            },
+            "repeat" : {
+              "person_link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Contact persons",
+                  "placeholder" : "Link to person..."
+                }
+              }
+            }
+          },
+          "about" : {
+            "type" : "Slice",
+            "fieldset" : "About",
+            "description" : "Image, Text and Quote",
+            "icon" : "accessibility",
+            "display" : "list",
+            "non-repeat" : {
+              "header" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2, heading3, heading4",
+                  "label" : "Header"
+                }
+              },
+              "text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em, hyperlink",
+                  "allowTargetBlank" : true,
+                  "label" : "text"
+                }
+              },
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 625
+                  },
+                  "thumbnails" : [ ],
+                  "label" : "image"
+                }
+              },
+              "accordion_2_header" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading6",
+                  "label" : "Accordion (2) - Header - (This will show link list of your practice areas)",
+                  "placeholder" : "Add clickable header..."
+                }
+              },
+              "accordions_1_header" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading6",
+                  "label" : "Accordions (1) - Header",
+                  "placeholder" : "Add clickable header..."
+                }
+              },
+              "general" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em, hyperlink",
+                  "allowTargetBlank" : true,
+                  "label" : "Accordion (1) - General text",
+                  "placeholder" : "General text"
+                }
+              }
+            },
+            "repeat" : {
+              "said" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Accordion (1) - What said",
+                  "placeholder" : "What said..."
+                }
+              },
+              "who" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Accordion (1) - Who said",
+                  "placeholder" : "Who said..."
+                }
+              }
+            }
           }
         }
       }

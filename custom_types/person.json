@@ -1,0 +1,56 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "Name in URL"
+      }
+    },
+    "image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Image"
+      }
+    },
+    "name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Name"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading2",
+        "label" : "Title"
+      }
+    },
+    "contact" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em, hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "Contact details"
+      }
+    },
+    "text" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em, hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "Personal text"
+      }
+    },
+    "details" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em, hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "Details"
+      }
+    }
+  }
+}

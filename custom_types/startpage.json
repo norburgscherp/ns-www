@@ -1,0 +1,47 @@
+{
+  "Main" : {
+    "namn" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading6",
+        "label" : "Menu name"
+      }
+    },
+    "startpage_banner" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "title" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading1",
+              "label" : "Banner Title /  Practise area",
+              "placeholder" : "Banner Title / Practise area ..."
+            }
+          },
+          "text" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "paragraph",
+              "label" : "Practise area text",
+              "placeholder" : "Banner text / Practise area text..."
+            }
+          },
+          "image" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : {
+                "width" : 2000,
+                "height" : null
+              },
+              "thumbnails" : [ ],
+              "label" : "Banner Image"
+            }
+          }
+        },
+        "label" : "Startpage Banner",
+        "repeat" : false
+      }
+    }
+  }
+}

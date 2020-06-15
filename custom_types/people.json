@@ -1,0 +1,25 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title"
+      }
+    },
+    "lists_persons" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "link_person" : {
+            "type" : "Link",
+            "config" : {
+              "label" : "Link to person"
+            }
+          }
+        },
+        "label" : "Lists of persons"
+      }
+    }
+  }
+}
