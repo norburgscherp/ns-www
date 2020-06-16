@@ -181,105 +181,6 @@
         </section>
 
 
-        <!-- GRID -->
-
-        <section class="sgd-s-grid " id="to-sgd-grid">
-          <div class="sgd-gc">
-            <div class="sgd-g-12">
-              <h2 class="sgd-header -type -foundation">Layout - Breakpoints <span>(Px)</span></h2>
-            </div>
-            <div class="sgd-g-12">
-              <p>The most common breakpoints and highlited recommendations.</p> <br>
-              <div class="sgd-header-tag -large -rek">320</div>
-              <div class="sgd-header-tag -large">480</div>
-              <div class="sgd-header-tag -large">600</div>
-              <div class="sgd-header-tag -large -rek">768</div>
-              <div class="sgd-header-tag -large">1024</div>
-              <div class="sgd-header-tag -large -rek">1280</div>
-              <div class="sgd-header-tag -large">1368</div>
-              <div class="sgd-header-tag -large">1440</div>
-              <div class="sgd-header-tag -large">1680</div>
-              <div class="sgd-header-tag -large">1920</div>
-              <br><br>
-            </div>
-          </div>
-
-          <div class="sgd-gc">
-            <div class="sgd-g-12">
-              <h2 class="sgd-header -type -foundation">Layout - Grid <span>(12 columns, Px)</span></h2>
-            </div>
-          </div>
-
-          <div class="site-grid">
-            <div class="gc">
-
-              <div class="g-12"><div class="sgd-placeholder">g-12</div></div>
-
-              <div class="g-11"><div class="sgd-placeholder">g-11</div></div>
-              <div class="g-1"><div class="sgd-placeholder">g-1</div></div>
-
-              <div class="g-10"><div class="sgd-placeholder">g-10</div></div>
-              <div class="g-2"><div class="sgd-placeholder">g-2</div></div>
-
-              <div class="g-9"><div class="sgd-placeholder">g-9</div></div>
-              <div class="g-3"><div class="sgd-placeholder">g-3</div></div>
-
-              <div class="g-8"><div class="sgd-placeholder">g-8</div></div>
-              <div class="g-4"><div class="sgd-placeholder">g-4</div></div>
-
-              <div class="g-7"><div class="sgd-placeholder">g-7</div></div>
-              <div class="g-5"><div class="sgd-placeholder">g-5</div></div>
-
-              <div class="g-6"><div class="sgd-placeholder">g-6</div></div>
-              <div class="g-6"><div class="sgd-placeholder">g-6</div></div>
-
-              <div class="g-1"><div class="sgd-placeholder">g-1</div></div>
-              <div class="g-1"><div class="sgd-placeholder">g-1</div></div>
-              <div class="g-1"><div class="sgd-placeholder">g-1</div></div>
-              <div class="g-1"><div class="sgd-placeholder">g-1</div></div>
-              <div class="g-1"><div class="sgd-placeholder">g-1</div></div>
-              <div class="g-1"><div class="sgd-placeholder">g-1</div></div>
-              <div class="g-1"><div class="sgd-placeholder">g-1</div></div>
-              <div class="g-1"><div class="sgd-placeholder">g-1</div></div>
-              <div class="g-1"><div class="sgd-placeholder">g-1</div></div>
-              <div class="g-1"><div class="sgd-placeholder">g-1</div></div>
-              <div class="g-1"><div class="sgd-placeholder">g-1</div></div>
-              <div class="g-1"><div class="sgd-placeholder">g-1</div></div>
-
-              <div class="g-3 g-push-1 g-pull-8"><div class="sgd-placeholder">g-2 g-push-1</div></div>
-              <div class="g-2 g-m-push-0 g-t-push-0 g-push-3 g-pull-7"><div class="sgd-placeholder">g-4 g-push-3</div></div>
-
-            </div>
-
-            <div class="gc -g-center">
-              <div class="g-6"><div class="sgd-placeholder"> g-6</div></div>
-            </div>
-
-            <div class="gc -no-gutter">
-              <div class="g-4"><div class="sgd-placeholder">g-4</div></div>
-              <div class="g-4"><div class="sgd-placeholder -darker">g-4</div></div>
-              <div class="g-4"><div class="sgd-placeholder">g-4</div></div>
-            </div>
-
-            <div class="gc -full-width">
-              <div class="g-4"><div class="sgd-placeholder">g-4</div></div>
-              <div class="g-4"><div class="sgd-placeholder -darker">g-4</div></div>
-              <div class="g-4"><div class="sgd-placeholder">g-4</div></div>
-            </div>
-
-            <div class="gc -maximize">
-              <div class="g-4"><div class="sgd-placeholder">g-4</div></div>
-              <div class="g-4"><div class="sgd-placeholder -darker">g-4</div></div>
-              <div class="g-4"><div class="sgd-placeholder">g-4</div></div>
-            </div>
-
-            <div class="gc -g-center">
-              <div class="g-8 g-m-6 g-t-12"><div class="sgd-placeholder">g-8 g-m-6 g-t-12</div></div>
-            </div>
-
-          </div>
-        </section>
-
 
         <!-- ICONS + FAVICON + IMAGES -->
 
@@ -289,27 +190,12 @@
 
             <div class="sgd-row">
 
-              <!-- ICONS -->
-              <div class="sgd-g-4">
-                 <h2 class="sgd-header -type -foundation">Icons</h2>
-                <svg-icon class="icon" name="facebook" />
-                <svg-icon class="icon" name="instagram" />
-              </div>
 
               <!-- FAVICON  -->
               <div class="sgd-g-4">
                 <h2 class="sgd-header -type -foundation">Favicon</h2>
                 <img src="~/static/android-chrome-512x512.png" class="fav">
               </div>
-
-              <!-- IMAGES -->
-              <div class="sgd-g-4">
-                <h2 class="sgd-header -type -foundation">Image <span>(Ratio)</span> </h2>
-                <figure class="-image-ratio-4-3">
-                  <img src="https://images.prismic.io/impact/2236cde9-81ca-4f5e-a276-0459ef1dee1d_imp-p-2.jpeg?auto=compress,format&rect=0,0,5184,3453&w=512&h=341" />
-                </figure>
-              </div>
-
 
             </div>
 
@@ -322,63 +208,7 @@
         <!-- *** *** --- ----- ---  *** *** -->
 
 
-        <!-- PART - HEADER -->
 
-        <section class="sgd-s-parts"  id="to-sgd-icons">
-
-          <div class="sgd-gc">
-            <div class="sgd-g-12">
-               <h2 class="sgd-header -type -part">Header</h2>
-            </div>
-          </div>
-
-          <div class="part">
-            <site-header />
-          </div>
-
-        </section>
-
-
-        <!-- PART - FOOTER -->
-
-        <section class="sgd-s-parts -light"  id="to-sgd-icons">
-
-          <div class="sgd-gc">
-            <div class="sgd-g-12">
-               <h2 class="sgd-header -type -part">Footer</h2>
-            </div>
-          </div>
-
-          <div class="part">
-            <site-footer />
-          </div>
-
-        </section>
-
-
-        <!-- PART - CONTENT -->
-
-        <section class="sgd-s-parts"  id="to-sgd-icons">
-
-          <div class="sgd-gc">
-            <div class="sgd-g-12">
-               <h2 class="sgd-header -type -part">CONTENT</h2>
-            </div>
-          </div>
-
-          <div class="part">
-            <br>
-            <section class="slice-impact-content impact-content -border-both"><div class="gc"><div class="g-12 border-top border"></div> <div class="row "><div class="g-6 slice-image"><img src="https://images.prismic.io/impact/7c79c67d-e4e1-42d0-84b4-5c4f71f2b01b_impact-temp-logo.jpg?auto=compress,format&amp;rect=0,0,3900,2597&amp;w=512&amp;h=341"> <!----></div> <div class="g-6 slice-content"><div class="header"><div class="header-styling"><h2>Thaiboxning</h2><h2></h2></div></div> <div class="text"><div><p><strong>NYBÖRJARGRUPPEN<br></strong><em><strong></strong>Junior: </em>3 pass/vecka, 2100kr, <a href="/content/schema">schema &gt;</a><br><em>Senior:</em> 3 pass/vecka, 3000kr, <a href="/content/schema">schema &gt;</a></p><p><strong>FORTSÄTTNINGSGRUPPEN<br></strong><em><strong></strong>Junior: </em>4 pass/vecka, 2100kr, <a href="/content/schema">schema &gt;</a><br><em>Senior:</em> 4 pass/vecka, 3000kr, <a href="/content/schema">schema &gt;</a></p><p><strong>AVANCERAT / TÄVLING<br></strong><em><strong></strong>6</em> pass/vecka, 3000kr, <a href="/content/schema">schema &gt;</a></p></div></div></div></div> <div class="g-12 border-bottom border"></div></div></section>
-          </div>
-
-        </section>
-
-
-
-
-
-
-     
 
 
 
@@ -396,7 +226,7 @@
     components: {
      // Logo
     },
-    layout: 'placeholder'
+    layout: 'clean'
   }
   
 </script>
