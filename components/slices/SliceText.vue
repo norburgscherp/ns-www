@@ -1,15 +1,10 @@
 <template>
   <section class="slice-text site-width">
 
-        <div class="text site-content-width">
-          
-          <prismic-rich-text :field="slice.primary.text"/>
-          
-        </div>
-      </div>
-
+    <div class="text site-content-width">
+      <prismic-rich-text :field="slice.primary.text"/>
     </div>
-
+      
   </section>
 </template>
 
@@ -18,21 +13,22 @@ export default {
   props: ['slice'],
   name: 'slice-text',
   mounted() {
-      if (process.client) {
-        if (document.querySelector('.nuxt-link-handler')){
-          document.querySelector('.nuxt-link-handler').addEventListener('click', event => {
-            event.preventDefault()
-            this.$router.push(event.target.pathname)
-          })
-        }
+    if (process.client) {
+      if (document.querySelector('.nuxt-link-handler')){
+        document.querySelector('.nuxt-link-handler').addEventListener('click', event => {
+          event.preventDefault()
+          this.$router.push(event.target.pathname)
+        })
       }
-    },
+    }
+  },
 }
 </script>
 
 <style lang="scss">
 
   .slice-text {
+    padding-bottom: 30px;
     p {
       margin: 0;
       + p {
@@ -42,3 +38,28 @@ export default {
   }
 
 </style>
+
+<!-- Prismic cusyom type - JSON -->
+
+<!-- 
+
+  "text" : {
+            "type" : "Slice",
+            "fieldset" : "Text",
+            "description" : "Text -> Bold, Italic and Lists",
+            "icon" : "text_fields",
+            "display" : "list",
+            "non-repeat" : {
+              "text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em, hyperlink, list-item, o-list-item, o-list-item",
+                  "allowTargetBlank" : true,
+                  "label" : "Text"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+
+--> 

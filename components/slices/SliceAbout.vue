@@ -151,7 +151,7 @@ export default {
     }
 
     .text-said {
-      // font-style: italic;
+      font-family: $font-caslon-fine;
       &.-no {
         margin-top: 15px;
       }

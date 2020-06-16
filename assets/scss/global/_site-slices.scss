@@ -133,7 +133,9 @@
 
   @include VP480 {
     .header {
-      h1 {
+      h1,
+      h2,
+      h3 {
         padding-left: 30px;
         padding-right: 30px;
         white-space: nowrap;
@@ -172,7 +174,6 @@
       text-transform: uppercase;
       min-height: 100px;
       letter-spacing: .1em;
-      border: 1px solid $black;
       @include aspect-ratio-img(288,384);
 
       .title {

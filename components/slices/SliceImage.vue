@@ -25,5 +25,37 @@ export default {
   }
 </style>
 
+<!-- Prismic cusyom type - JSON -->
 
+<!-- 
+
+   "image" : {
+            "type" : "Slice",
+            "fieldset" : "Image",
+            "description" : "Full width image (Can be a schema) ",
+            "icon" : "image",
+            "display" : "list",
+            "non-repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 1080
+                  },
+                  "thumbnails" : [ {
+                    "name" : "tablet",
+                    "width" : 740,
+                    "height" : null
+                  }, {
+                    "name" : "mobile",
+                    "width" : 452,
+                    "height" : null
+                  } ],
+                  "label" : "Image"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+--> 
 
