@@ -85,10 +85,10 @@
               <div class="sgd-g-6">
                 <h2>Language</h2>
                 <p>1. Languages is located up to the right.</p>
-                <p>2. Click and choose language</p>
+                <p>2. Click and choose to toggle languages</p>
 
                 <br>
-                <p><b>Ex. </b> Make your page is English. Then you can copy that page to Swedish, and the start translating. <a href="https://user-guides.prismic.io/en/articles/2760541-copy-content-to-a-different-locale" target="_blank">Se how here</a></p>
+                <p><b>Ex. </b> To make your page is English. Then you can copy that page to Swedish, and the start translating. <a href="https://user-guides.prismic.io/en/articles/2760541-copy-content-to-a-different-locale" target="_blank">Se how here</a></p>
               </div>
               
               <div class="sgd-g-6">
@@ -107,10 +107,10 @@
               <div class="sgd-g-6">
                 <h2>Edit a page</h2>
                 <p>1. Go to content <a href="https://norburg-and-scherp.prismic.io/documents/working/" target="_blank">page</a>.</p>
-                <p>2. Do your edtiting"</p>
+                <p>2. Do your edtiting</p>
                 <p>3. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
                 <p>4. Choose the other language.</p>
-                <p>2. Do your edtiting"</p>
+                <p>2. Do your edtiting</p>
                 <p>3. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
                 <br>
                 <p><b>Now you edited a page, don't forget to edit all languages!</b></p>
