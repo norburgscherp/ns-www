@@ -46,13 +46,13 @@
                 <p>1. Got to  <a href="https://prismic.io/dashboard" target="_blank">https://prismic.io/dashboard</a></p>
                 <p>2. Add your credentials</p>
                 <p>3. Click "Login"</p>
-                <p>4. Click "Impact Gym" on the dashboard</p>
+                <p>4. Click "Norberg &amp; Scherp" on the dashboard</p>
               </div>
               
               <div class="sgd-g-6">
                 <h4>&nbsp;</h4>
                 <video width="320" height="240" controls>
-                <source src="https://activetalents.se/waterslowenhielm/impact/videos/login-1.webm" type="video/webm">
+                <source src="https://activetalents.se/waterslowenhielm/ns/videos/login.webm" type="video/webm">
                 Your browser does not support the video tag.
                 </video>
               </div>
@@ -72,66 +72,91 @@
               <div class="sgd-g-6">
                 <h4>&nbsp;</h4>
                 <video width="320" height="240" controls>
-                <source src="https://activetalents.se/waterslowenhielm/impact/videos/add-media-1.webm" type="video/webm">
+                <source src="https://activetalents.se/waterslowenhielm/ns/videos/media.webm" type="video/webm">
                 Your browser does not support the video tag.
                 </video>
               </div>
              
             </div>
 
-
             <br><br>
             <div class="sgd-row">
+
               <div class="sgd-g-6">
-              
-                <h2>Settings page</h2>
-                <p>1. Go to content <a href="https://impact.prismic.io/documents/working/" target="_blank">page</a>.</p>
-                <p>2. Click the page named "Settings"</p>
+                <h2>Language</h2>
+                <p>1. Languages is located up to the right.</p>
+                <p>2. Click and choose language</p>
+
                 <br>
-                <p>This page contains basic SEO and the links to social media. </p>
-                
-
+                <p><b>Ex. </b> Make your page is English. Then you can copy that page to Swedish, and the start translating. <a href="https://user-guides.prismic.io/en/articles/2760541-copy-content-to-a-different-locale" target="_blank">Se how here</a></p>
               </div>
               
-             <div class="sgd-g-6">
+              <div class="sgd-g-6">
                 <h4>&nbsp;</h4>
                 <video width="320" height="240" controls>
-                <source src="https://activetalents.se/waterslowenhielm/impact/videos/settings-1.webm" type="video/webm">
+                <source src="https://activetalents.se/waterslowenhielm/ns/videos/media.webm" type="video/webm">
                 Your browser does not support the video tag.
                 </video>
               </div>
              
             </div>
+
 
             <br><br>
             <div class="sgd-row">
               <div class="sgd-g-6">
-              
-                <h2>Footer info</h2>
-                <p>1. Go to content <a href="https://impact.prismic.io/documents/working/" target="_blank">page</a>.</p>
-                <p>2. Click the page named "Footer"</p>
-                <p>3. Add text and links</p>
-          
+                <h2>Edit a page</h2>
+                <p>1. Go to content <a href="https://norburg-and-scherp.prismic.io/documents/working/" target="_blank">page</a>.</p>
+                <p>2. Do your edtiting"</p>
+                <p>3. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+                <p>4. Choose the other language.</p>
+                <p>2. Do your edtiting"</p>
+                <p>3. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+                <br>
+                <p><b>Now you edited a page, don't forget to edit all languages!</b></p>
                 
-
+             
               </div>
               
-             <div class="sgd-g-6">
-                <h4>&nbsp;</h4>
+              <div class="sgd-g-6">
+                <h2>&nbsp;</h2>
                 <video width="320" height="240" controls>
-                <source src="https://activetalents.se/waterslowenhielm/impact/videos/footer-1.webm" type="video/webm">
+                <source src="https://activetalents.se/waterslowenhielm/ns/videos/edit-page.webm" type="video/webm">
                 Your browser does not support the video tag.
                 </video>
               </div>
-             
+            
             </div>
-
+       <!--      <br><br>
+            <div class="sgd-row">
+              <div class="sgd-g-6">
+                <h2>Add a new page</h2>
+                
+                <p>1. Go to content <a href="https://norburg-and-scherp.prismic.io/documents/working/" target="_blank">page</a>.</p>
+                <p>2. top right corner click green button , "Create new"</p>
+                <p>3. Choose "Content"</p>
+                <p>4.1. Type in "Name in url". This will be name shown <br>ex. "demo" -> <i>https://impactgym.se/content/demo</i></p>
+                <p>4.2. Type in Page title, this si the big title in the top of the page.</p>
+                <p>5. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+              </div>
+              
+              <div class="sgd-g-6">
+                <h2>&nbsp;</h2>
+                <video width="320" height="240" controls>
+                <source src="https://activetalents.se/waterslowenhielm/impact/videos/page-add-1.webm" type="video/webm">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+            
+            </div>
+ -->
+<!-- 
             <br><br>
             <div class="sgd-row">
               <div class="sgd-g-6">
                 <h2>The menu</h2>
 
-                <p>1. Go to content <a href="https://impact.prismic.io/documents/working/" target="_blank">page</a>.</p>
+                <p>1. Go to content <a href="https://norburg-and-scherp.prismic.io/documents/working/" target="_blank">page</a>.</p>
                 <p>2. Click the page named "Top menu"</p>
            
               </div>
@@ -177,55 +202,11 @@
                 </video>
               </div>
              
-            </div>
+            </div> -->
 
-            <br><br>
-            <div class="sgd-row">
-              <div class="sgd-g-6">
-                <h2>Add a new page</h2>
-                <p>1. Go to content <a href="https://impact.prismic.io/documents/working/" target="_blank">page</a>.</p>
-                <p>2. top right corner click green button , "Create new"</p>
-                <p>3. Choose "Content"</p>
-                <p>4.1. Type in "Name in url". This will be name shown <br>ex. "demo" -> <i>https://impactgym.se/content/demo</i></p>
-                <p>4.2. Type in Page title, this si the big title in the top of the page. See "<a href="https://impactgym.se/content/demo/" target="_blank">Demo Content</a></i>"</p>
-                <p>5. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
-              </div>
-              
-              <div class="sgd-g-6">
-                <h2>&nbsp;</h2>
-                <video width="320" height="240" controls>
-                <source src="https://activetalents.se/waterslowenhielm/impact/videos/page-add-1.webm" type="video/webm">
-                Your browser does not support the video tag.
-                </video>
-              </div>
-            
-            </div>
 
-            <br><br>
-            <div class="sgd-row">
-              <div class="sgd-g-6">
-                <h2>Add a new page -> Schema</h2>
-                <p>1. Go to content <a href="https://impact.prismic.io/documents/working/" target="_blank">page</a>.</p>
-                <p>2. top right corner click green button , "Create new"</p>
-                <p>3. Choose "Schema"</p>
-                <p>4.1. Type in "Name in url". This will be name shown 
-                <p>4.2. Type in Page title, this si the big title in the top of the page.
-                <p>5. Add day + sessions that day</p>
-                <p>6. Add day next day + session etc.</p>
-                <p>7. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
-              </div>
-              
-              <div class="sgd-g-6">
-                <h2>&nbsp;</h2>
-                <video width="320" height="240" controls>
-                <source src="https://activetalents.se/waterslowenhielm/impact/videos/page-schema-1.webm" type="video/webm">
-                Your browser does not support the video tag.
-                </video>
-              </div>
-            
-            </div>
 
-            <br><br>
+<!--             <br><br>
             <div class="sgd-row">
               <div class="sgd-g-12">
                 <h2>Preview your changes</h2>
@@ -249,9 +230,57 @@
                 </video>
               </div>
             
+            </div> -->
+
+
+
+<!--             <br><br>
+            <div class="sgd-row">
+              <div class="sgd-g-6">
+              
+                <h2>SEO</h2>
+                <p>1. Go to content <a href="https://norburg-and-scherp.prismic.io/documents/working/" target="_blank">page</a>.</p>
+                <p>2. Click the page named "Settings"</p>
+                <br>
+                <p>This page contains basic SEO and the links to social media. </p>
+                
+
+              </div>
+              
+             <div class="sgd-g-6">
+                <h4>&nbsp;</h4>
+                <video width="320" height="240" controls>
+                <source src="https://activetalents.se/waterslowenhielm/impact/videos/settings-1.webm" type="video/webm">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+             
             </div>
 
             <br><br>
+            <div class="sgd-row">
+              <div class="sgd-g-6">
+              
+                <h2>Footer info</h2>
+                <p>1. Go to content <a href="https://norburg-and-scherp.prismic.io/documents/working/" target="_blank">page</a>.</p>
+                <p>2. Click the page named "Footer"</p>
+                <p>3. Add text and links</p>
+          
+                
+
+              </div>
+              
+             <div class="sgd-g-6">
+                <h4>&nbsp;</h4>
+                <video width="320" height="240" controls>
+                <source src="https://activetalents.se/waterslowenhielm/impact/videos/footer-1.webm" type="video/webm">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+             
+            </div> -->
+
+<!--             <br><br>
             <div class="sgd-row">
 
               <div class="sgd-g-12">
@@ -298,7 +327,7 @@
       
               </div>
              
-            </div>
+            </div> -->
 
           </div>
         </section>
@@ -317,7 +346,7 @@
     components: {
      // Logo
     },
-    layout: 'placeholder'
+    layout: 'clean'
   }
   
 </script>
