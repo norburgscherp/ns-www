@@ -10,7 +10,7 @@
 <script>
 export default {
   head: {
-    title: 'Pre'
+    title: 'Primsic - Preview'
   },
   mounted () {
     this.$prismic.preview()
