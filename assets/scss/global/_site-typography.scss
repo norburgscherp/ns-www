@@ -17,19 +17,14 @@
       // TABLET
       @include VP768  {
         margin: 25px 0;
-       // font-size: 68px;
-       //  margin: 28px 0 26px;
       }
 
       // DESKTOP
       @include VP1280  {
         margin: 40px 0;
-        // font-size: 90px;
-        //  margin: 48px 0;
       }
 
     }
-
 
     // BLACK LINE - (Bottom)
     .page-site-header {
