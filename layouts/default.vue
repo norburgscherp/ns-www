@@ -15,36 +15,29 @@ export default {
     SiteHeader,
     SiteFooter
   },
- data() {
-    return {
-      seo_desc_en: this.$store.state.footer_en.seo_description[0].text,
-      seo_keys_en: this.$store.state.footer_en.seo_keywords[0].text,
-      seo_desc_sv: this.$store.state.footer_sv.seo_description[0].text,
-      seo_keys_sv: this.$store.state.footer_sv.seo_keywords[0].text,
-      seo_lang: this.$i18n.locale,
-    };
-  },
+
   head () {
 
     let meta = [] 
 
-    if (this.seo_lang === 'en') {
+    if (this.$i18n.locale === 'en') {
       meta = [
-        { name: 'description', content: this.seo_desc_en },
-        { name: 'keywords', content: this.seo_keys_en },
+        { name: 'description', content: this.$store.state.footer_en.seo_description[0].text },
+        { name: 'keywords', content: this.$store.state.footer_en.seo_keywords[0].text },
       ];
     }
 
-    if (this.seo_lang === 'sv') {
+    if (this.$i18n.locale === 'sv') {
       meta = [
-        { name: 'description', content: this.seo_desc_sv },
-        { name: 'keywords', content: this.seo_keys_sv },
+        { name: 'description', content: this.$store.state.footer_sv.seo_description[0].text },
+        { name: 'keywords', content: this.$store.state.footer_sv.seo_keywords[0].text },
       ];
     }
 
     return {
       meta: meta,
     }
+    
   },
   // Called before rendering the layout (even for error page)
   async middleware({ store, $prismic, app }) {
