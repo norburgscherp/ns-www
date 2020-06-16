@@ -13,6 +13,8 @@ export default {
     title: 'Primsic - Preview'
   },
   mounted () {
+    
+    setTimeout( () => console.log("Hello"), 1000000 )
     this.$prismic.preview()
   }
 }
@@ -31,21 +33,19 @@ export default {
   font-size: 20px;
   text-align: center;
   z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   h4 {
+    display: block;
     color: $black;
     text-align: center;
   }
   .box {
     text-align: center;
-  }
-  img {
-    max-width: 400px;
-    width: 50vw;
-    height: auto;
-    margin-bottom: 20px;
+    img {
+      max-width: 400px;
+      width: 50vw;
+      height: auto;
+      margin-bottom: 20px;
+    }
   }
 }
 
