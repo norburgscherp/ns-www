@@ -334,7 +334,7 @@ export default {
           &:nth-child(1) {
             width: 100%;
             transform: rotate(135deg);
-            top: 8px;
+            top: 9px;
           }
           &:nth-child(2) {
             width: 0;
@@ -344,7 +344,7 @@ export default {
           &:nth-child(3) {
             width: 100%;
             transform: rotate(-135deg);
-            bottom: 8px;
+            bottom: 9px;
           }
         }
       }
@@ -365,12 +365,16 @@ export default {
   }
 
   .langs {
-    font-size: 21px;
     position: absolute;
     right: 15px;
     top: 50%;
-    margin-top: -14px;
+    margin-top: -16px;
     z-index: 2;
+    a {
+      font-size: 18px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
   }
 
 
@@ -393,7 +397,7 @@ export default {
       z-index: 5;
 
       span {
-        height: 1px;
+        height: 2px;
         display: block;
         margin-bottom: 7px;
         background: $black;
