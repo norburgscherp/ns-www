@@ -48,7 +48,6 @@ export default {
   },
   // Called before rendering the layout (even for error page)
   async middleware({ store, $prismic, app }) {
-    // console.log('middleware-> ' , app)
     await store.dispatch('fetchContent', $prismic)
   }
 }
