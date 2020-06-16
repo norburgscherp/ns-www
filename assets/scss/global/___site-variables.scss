@@ -6,18 +6,18 @@
 
 //  - - - COLORS
 
-$white: #f7f8f8 !default;
-$white-off: #f9f8f1 !default; 
-$black: #000000 !default;
+$white: 		#f7f8f8 !default;
+$white-off: 	#f9f8f1 !default; 
+$black: 		#000000 !default;
 
-$red: #471e28 !default;
-$blue: #adc9e8 !default;
+$red: 			#471e28 !default;
+$blue: 			#adc9e8 !default;
 
-$grey: #aaaaaa!default;
+$grey: 			#aaaaaa!default;
 $gray: $grey;
 
-$grey-dark: #a4a1a0!default;
-$gray-dark: $grey-dark;
+$grey-dark: 	#a4a1a0!default;
+$gray-dark: 	$grey-dark;
 
 // - - -  LINK
 
@@ -28,18 +28,18 @@ $link-click: $black;
 
 // - - - FONTS
 
-$font-system: "-apple-system", BlinkMacSystemFont, "Apple Color Emoji", “Segoe UI”, Roboto, “Helvetica Neue”, Helvetica, Arial, sans-serif;
+$font-system: 		"-apple-system", BlinkMacSystemFont, "Apple Color Emoji", “Segoe UI”, Roboto, “Helvetica Neue”, Helvetica, Arial, sans-serif;
 
-$font-caslon: CaslonFiveFortyLT-Roman, sans-serif;
-$font-caslon-fine: CaslonFiveFortyLT-Italic, serif;
-$font-caslon-caps: CaslonFiveForty-RomanSC, serif;
-$font-copper: CopperplateGothicLTPro-30AB, serif;
+$font-caslon: 		CaslonFiveFortyLT-Roman, sans-serif;
+$font-caslon-fine: 	CaslonFiveFortyLT-Italic, serif;
+$font-caslon-caps: 	CaslonFiveForty-RomanSC, serif;
+$font-copper: 		CopperplateGothicLTPro-30AB, serif;
 
-$body-font: $font-caslon;
-$body-color: $black;
+$body-font: 		$font-caslon;
+$body-color: 		$black;
 
-$header-font: $font-copper;
-$header-color: $black;
+$header-font: 		$font-copper;
+$header-color: 		$black;
 
 
 
