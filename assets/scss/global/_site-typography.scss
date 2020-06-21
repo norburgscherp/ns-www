@@ -80,11 +80,13 @@
   h4,
   h5,
   h6  {
-      font-family: $header-font;
-      color: $header-color;
-      display: block;
-      margin: 0 0 .44em;
-      word-break: break-word;
+    font-family: $header-font;
+    color: $header-color;
+    display: block;
+    margin: 0 0 .44em;
+    word-break: break-word;
+    text-transform: uppercase;
+    letter-spacing: .1em;
   }
 
   @include VP320  {
