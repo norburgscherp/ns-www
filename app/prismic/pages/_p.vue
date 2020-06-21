@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .preview-overlay {
   position: fixed;
   background-color: $red;
@@ -40,7 +40,7 @@ export default {
       text-align: center;
     }
     img {
-      max-width: 400px;
+      max-width: 400px!important;
       width: 50vw;
       height: auto;
       margin-bottom: 20px;
