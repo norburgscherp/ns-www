@@ -1,5 +1,5 @@
 <template>
-<section class="p-design-delivery site-grid">
+<section class="styleguide-videos site-grid">
 
 
     <!-- TOP HERO -->
@@ -33,7 +33,8 @@
         <section class="sgd-s-links  "  id="to-sgd-buttons">
           <div class="sgd-gc">
 
-    <!--         <div class="sgd-g-12">
+    <!--         
+            <div class="sgd-g-12">
               <h2 class="sgd-header -type -docs">Prismic.io how to:s</h2>
               <br>
             </div> -->
@@ -107,15 +108,14 @@
               <div class="sgd-g-6">
                 <h2>Edit a page</h2>
                 <p>1. Go to content <a href="https://norburg-and-scherp.prismic.io/documents/working/" target="_blank">page</a>.</p>
-                <p>2. Do your edtiting</p>
-                <p>3. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
-                <p>4. Choose the other language.</p>
-                <p>2. Do your edtiting</p>
-                <p>3. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+                <p>2. Find the page you want to edit</p>
+                <p>3. Do your editing</p>
+                <p>4. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+                <p>5. Choose the other language.</p>
+                <p>6. Do your edtiting</p>
+                <p>7. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
                 <br>
                 <p><b>Now you edited a page, don't forget to edit all languages!</b></p>
-                
-             
               </div>
               
               <div class="sgd-g-6">
@@ -127,30 +127,126 @@
               </div>
             
             </div>
-       <!--      <br><br>
+
+
+            <br><br>
             <div class="sgd-row">
               <div class="sgd-g-6">
-                <h2>Add a new page</h2>
                 
-                <p>1. Go to content <a href="https://norburg-and-scherp.prismic.io/documents/working/" target="_blank">page</a>.</p>
+                <h2>Practice area</h2>
+                <p><b>Add new (with linked contacts)</b></p>
+                <p>1. Go to content page</p>
                 <p>2. top right corner click green button , "Create new"</p>
-                <p>3. Choose "Content"</p>
-                <p>4.1. Type in "Name in url". This will be name shown <br>ex. "demo" -> <i>https://impactgym.se/content/demo</i></p>
-                <p>4.2. Type in Page title, this si the big title in the top of the page.</p>
-                <p>5. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+                <p>3. Choose "Page"</p>
+                <p>4. Add slice "Practice area"</p>
+                <p>5. Add Text, quote, image and links to the contact persons</p>
+                <p>6. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+                <p>7. Change language</p>
+                <p>8. Repeat step 5</p>
+                <p>9. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+            
+
               </div>
               
               <div class="sgd-g-6">
                 <h2>&nbsp;</h2>
                 <video width="320" height="240" controls>
-                <source src="https://activetalents.se/waterslowenhielm/impact/videos/page-add-1.webm" type="video/webm">
+                <source src="https://activetalents.se/waterslowenhielm/ns/videos/page.webm" type="video/webm">
                 Your browser does not support the video tag.
                 </video>
               </div>
             
             </div>
- -->
-<!-- 
+
+            <br><br>
+            <div class="sgd-row">
+              <div class="sgd-g-6">
+                
+                <h2>Person</h2>
+                <p><b>Add new</b></p>
+                <p>1. Go to content page</p>
+                <p>2. top right corner click green button , "Create new"</p>
+                <p>3. Choose "Person"</p>
+                <p>4. Add image and information</p>
+                <p>5. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+                <p>6. Change language</p>
+                <p>7. Repeat step 4 </p>
+                <p>8. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+                <p>9. Go to content <a href="https://norburg-and-scherp.prismic.io/documents/working/" target="_blank">page</a>.</p>
+                <p>10. Find our people</p>
+                <p>11. Add the new peron. </p>
+                <p>12. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+                <p>13. Change language</p>
+                <p>14. Repeat steps 10 to 12</p>
+                <p>15. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+              </div>
+              
+              <div class="sgd-g-6">
+                <h2>&nbsp;</h2>
+                <video width="320" height="240" controls>
+                <source src="https://activetalents.se/waterslowenhielm/ns/videos/person.webm" type="video/webm">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+            
+            </div>
+
+            <br><br>
+            <div class="sgd-row">
+              <div class="sgd-g-6">
+
+                <h2>Update</h2>
+                <p><b>Add new</b></p>
+                
+                <p>1. Go to content <a href="https://norburg-and-scherp.prismic.io/documents/working/" target="_blank">page</a>.</p>
+                <p>2. Find the page, "updates"</p>
+                <p>3. Almost in bottom you find a button "Add a new element in Group"</p>
+                <p>4. Add Image/Header/Text</p>
+                <p>5. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+                <p>6. Swe & Eng</p>
+              </div>
+              
+              <div class="sgd-g-6">
+                <h2>&nbsp;</h2>
+                <video width="320" height="240" controls>
+                <source src="https://activetalents.se/waterslowenhielm/ns/videos/updates.webm" type="video/webm">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+            
+            </div>
+
+
+
+            <br><br>
+            <div class="sgd-row">
+              <div class="sgd-g-6">
+                
+                <h2>Career</h2>
+                <p><b>Add new</b></p>
+                
+                <p>1. Go to content <a href="https://norburg-and-scherp.prismic.io/documents/working/" target="_blank">page</a>.</p>
+                <p>2. Find the page, "Career"</p>
+                <p>3. Almost in bottom you find a button "Add a new element in Group"</p>
+                <p>4. Add Header/Text</p>
+                <p>5. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+                <p>6. Swe & Eng</p>
+              </div>
+              
+              <div class="sgd-g-6">
+                <h2>&nbsp;</h2>
+                <video width="320" height="240" controls>
+                <source src="https://activetalents.se/waterslowenhielm/ns/videos/career.webm" type="video/webm">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+            
+            </div>
+
+
+
+
+
             <br><br>
             <div class="sgd-row">
               <div class="sgd-g-6">
@@ -170,18 +266,21 @@
                 <p>3. Type the link name that will displayed in the top menu under "Label"</p>
                 <p>4. Click "Link" and choose were to link.</p>
                 <p>5. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+                <p>6. Change language</p>
+                <p>7. Repeat steps 1 to 4</p>
+                <p>8. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
               </div>
               
               <div class="sgd-g-6">
                  <h4>&nbsp;</h4>
                 <video width="320" height="240" controls>
-                <source src="https://activetalents.se/waterslowenhielm/impact/videos/menu-top-1.webm" type="video/webm">
+                <source src="https://activetalents.se/waterslowenhielm/ns/videos/menu.webm" type="video/webm">
                 Your browser does not support the video tag.
                 </video>
               </div>
 
             </div>
-            <div class="sgd-row">
+<!--             <div class="sgd-row">
 
               <div class="sgd-g-6">
                 <br>
@@ -197,7 +296,7 @@
               <div class="sgd-g-6">
                 <h4>&nbsp;</h4>
                 <video width="320" height="240" controls>
-                <source src="https://activetalents.se/waterslowenhielm/impact/videos/menu-sub-1.webm" type="video/webm">
+                <source src="https://activetalents.se/waterslowenhielm/ns/videos/menu-sub-1.webm" type="video/webm">
                 Your browser does not support the video tag.
                 </video>
               </div>
@@ -206,7 +305,7 @@
 
 
 
-<!--             <br><br>
+            <br><br>
             <div class="sgd-row">
               <div class="sgd-g-12">
                 <h2>Preview your changes</h2>
@@ -225,32 +324,35 @@
               <div class="sgd-g-6">
                 
                 <video width="320" height="240" controls>
-                <source src="https://activetalents.se/waterslowenhielm/impact/videos/page-preview-1.webm" type="video/webm">
+                <source src="https://activetalents.se/waterslowenhielm/ns/videos/preview.webm" type="video/webm">
                 Your browser does not support the video tag.
                 </video>
               </div>
             
-            </div> -->
+            </div>
 
 
 
-<!--             <br><br>
+            <br><br>
             <div class="sgd-row">
               <div class="sgd-g-6">
-              
                 <h2>SEO</h2>
-                <p>1. Go to content <a href="https://norburg-and-scherp.prismic.io/documents/working/" target="_blank">page</a>.</p>
-                <p>2. Click the page named "Settings"</p>
+                <p><b>FYI! SEO is "hidden" in the bottom of footer page.</b></p>
                 <br>
-                <p>This page contains basic SEO and the links to social media. </p>
-                
+                <p>1. Go to content <a href="https://norburg-and-scherp.prismic.io/documents/working/" target="_blank">page</a>.</p>
+                <p>2. Click the page named "Footer" (Tip. You can search for it)</p>
+                <p>3. Add/Edit</p>
+                <p>4. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
+                <p>5. Don't forget to add/edit all launguages</p>
+                <br>
+                <p>In the bottom of this page yopu will find the SEO Meta description and key words. </p>
 
               </div>
               
              <div class="sgd-g-6">
                 <h4>&nbsp;</h4>
                 <video width="320" height="240" controls>
-                <source src="https://activetalents.se/waterslowenhielm/impact/videos/settings-1.webm" type="video/webm">
+                <source src="https://activetalents.se/waterslowenhielm/ns/videos/seo.webm" type="video/webm">
                 Your browser does not support the video tag.
                 </video>
               </div>
@@ -264,70 +366,22 @@
                 <h2>Footer info</h2>
                 <p>1. Go to content <a href="https://norburg-and-scherp.prismic.io/documents/working/" target="_blank">page</a>.</p>
                 <p>2. Click the page named "Footer"</p>
-                <p>3. Add text and links</p>
+                <p>3.1. AddRedit/remove your text</p>
+                <p>3.2. Add logos and link them.</p>
+                <p>4. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
           
-                
-
               </div>
               
              <div class="sgd-g-6">
                 <h4>&nbsp;</h4>
                 <video width="320" height="240" controls>
-                <source src="https://activetalents.se/waterslowenhielm/impact/videos/footer-1.webm" type="video/webm">
+                <source src="https://activetalents.se/waterslowenhielm/ns/videos/footer.webm" type="video/webm">
                 Your browser does not support the video tag.
                 </video>
               </div>
              
-            </div> -->
+            </div>
 
-<!--             <br><br>
-            <div class="sgd-row">
-
-              <div class="sgd-g-12">
-                <h2>Use page slices</h2>
-                <p>1. Go to any "content" page were you want to add more conbtent</p>
-                <p>2. Click the round "+" button</p>
-                <p>3. Choose slice</p>
-                <p>4. Type and add images/videos</p>
-                <p>5. Top right corner, click "Save" -> "Publish" -> "Publish"</p>
-              </div>
-              
-              <div class="sgd-g-12">
-
-                <div class="video-wrapper">
-                  <div class="video">
-                    <strong>Slice "Headings" </strong><br>
-                    <video width="320" height="240" controls>
-                    <source src="https://activetalents.se/waterslowenhielm/impact/videos/page-slices-headings-1.webm" type="video/webm">
-                    Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="video">
-                    <strong>Slice "Text" </strong><br>
-                    <video width="320" height="240" controls>
-                    <source src="https://activetalents.se/waterslowenhielm/impact/videos/page-slices-text-1.webm" type="video/webm">
-                    Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="video">
-                    <strong>Slice "Image" </strong><br>
-                    <video width="320" height="240" controls>
-                    <source src="https://activetalents.se/waterslowenhielm/impact/videos/page-slices-image-1.webm" type="video/webm">
-                    Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="video">
-                    <strong>Slice "Video" </strong><br>
-                    <video width="320" height="240" controls>
-                    <source src="https://activetalents.se/waterslowenhielm/impact/videos/page-slices-video-1.webm" type="video/webm">
-                    Your browser does not support the video tag.
-                    </video>
-                  </div>
-                </div>          
-      
-              </div>
-             
-            </div> -->
 
           </div>
         </section>
@@ -340,12 +394,9 @@
 
 <script>
 
- // import Logo from '~/components/Logo.vue'
+
 
   export default {
-    components: {
-     // Logo
-    },
     layout: 'clean'
   }
   
@@ -355,13 +406,11 @@
 
   @import "~/assets/scss/styleguide/styleguide-imports.scss";
 
-  .video-wrapper {
-    padding-top: 36px;
-    margin-right: -12px;
-    margin-left: -12px;
-    .video {
-      margin: 0 24px 24px ;
-      float: left;
+
+
+  .styleguide-videos {
+    h2 {
+      font-size: 40px;
     }
   }
 
