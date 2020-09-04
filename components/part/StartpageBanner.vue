@@ -2,6 +2,7 @@
     <section class="startpage-banner" :style="{ backgroundImage: 'url(' + banner.image.url + ')' }">
 
       <div class="container ">
+        
         <h2 class="title">
           {{ $prismic.asText(banner.title) }}
           
@@ -10,7 +11,10 @@
         <p class="description">
           {{ $prismic.asText(banner.text) }}
         </p>
+
       </div>
+      <div class="banner-overlay"></div>
+
     </section>
 </template>
 
@@ -34,6 +38,23 @@ export default {
   text-align: center;
   overflow: hidden;
   max-height: 860px;
+  position: relative;
+
+  .container {
+    position: relative;
+    z-index: 3;
+  }
+
+  .banner-overlay {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #561b15;
+    opacity: 0.58;
+  }
 
 
   .title {
@@ -52,10 +73,12 @@ export default {
 
   .description {
     font-family: $font-caslon;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.3;
     margin: 0 auto ;
     padding: 0 20px 20px;
     max-width: 760px;
+    // text-shadow: 0px 0px 3px black,  0 0 6px black, 0px 0px 9px black,  0 0 12px black;
   }
 
 
