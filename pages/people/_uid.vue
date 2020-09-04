@@ -40,7 +40,7 @@
       </div>
 
       <!-- TEXT -->
-      <prismic-rich-text v-if="doc.text.length > 0 "  class="text person-text -hide-mobile" :field="doc.text"/>
+      <prismic-rich-text v-if="doc.text.length > 0 && !doc.text.length === '(text)' "  class="text person-text -hide-mobile" :field="doc.text"/>
 
       <!-- DETAILS-->
       <prismic-rich-text v-if="doc.details.length > 0 "  class="details text -hide-mobile" :field="doc.details"/>
