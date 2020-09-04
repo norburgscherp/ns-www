@@ -18,7 +18,10 @@
         <!-- TEXT -->
         <div class="slice-text">
 
-          <prismic-rich-text class="header" :field="slice.primary.header"/> 
+          <template v-if="slice.primary.header[0].text">
+            <prismic-rich-text class="header" :field="slice.primary.header"/> 
+          </template>
+          
           <prismic-rich-text class="text" :field="slice.primary.text"/>
 
           <div class="quote"v-if="slice.primary.quote[0].text">
@@ -610,6 +613,7 @@ export default {
       .link {
         padding-top: 11px;
         color: $grey;
+        cursor: pointer;
         a {
           text-decoration: none;
         }
