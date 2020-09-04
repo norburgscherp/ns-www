@@ -161,11 +161,11 @@ export default {
       }
 
       .who {
-        padding-bottom: 15px;
-        text-transform: uppercase;
-        font-size: 15px;
+        padding-bottom: 15px;   
+        font-size: 11px;
         font-family: $font-copper;
-        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: .1em;
       }
     }
 
