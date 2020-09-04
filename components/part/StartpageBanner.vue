@@ -81,6 +81,14 @@ export default {
     // text-shadow: 0px 0px 3px black,  0 0 6px black, 0px 0px 9px black,  0 0 12px black;
   }
 
+  @include VP600 {
+
+    .banner-overlay {
+      display: none;
+    }
+
+  }
+
 
   @include VP768 {
 
