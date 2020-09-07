@@ -13,7 +13,7 @@
         </p>
 
       </div>
-      <div class="banner-overlay"></div>
+      <!-- <div class="banner-overlay"></div> -->
 
     </section>
 </template>
@@ -45,16 +45,16 @@ export default {
     z-index: 3;
   }
 
-  .banner-overlay {
-    position: absolute;
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: #561b15;
-    opacity: 0.58;
-  }
+  // .banner-overlay {
+  //   position: absolute;
+  //   z-index: 2;
+  //   height: 100%;
+  //   width: 100%;
+  //   top: 0;
+  //   left: 0;
+  //   background: #561b15;
+  //   opacity: 0.58;
+  // }
 
 
   .title {
