@@ -19,8 +19,8 @@
           <!-- TEXT -->
           <div class="slice-text">
            
-            <!-- General text show when no job openings -->
-            <div v-if="slice.items.length === 0 || slice.items[0].header.length === 0" class="text-general">
+            <!-- General text  -->
+            <div v-if="slice.items[0].header.length !== 0" class="text-general">
               <prismic-rich-text class="header" :field="slice.primary.header"/>
               <prismic-rich-text class="text" :field="slice.primary.text"/>
             </div>
@@ -53,7 +53,8 @@ export default {
 
   .slice-career{
   
-  	.job {
+  	.job,
+    .text-general {
   		margin-bottom: 30px;
   	}
 
