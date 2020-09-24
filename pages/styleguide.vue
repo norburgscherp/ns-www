@@ -104,6 +104,7 @@
             <div class="sgd-g-12 font font-caslon">
               <div class="font-name">Caslon</div>
               <div class="font-glyphs">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Xx Yy Zz Åå Ää Öö</div>
+              <div class="font-glyphs">"" ''</div>
               <div class="font-glyphs -pb">1234567890</div>
 
               <div class="font-glyphs -italic">Italic Aa Bb Cc 123</div>
@@ -115,6 +116,7 @@
             <div class="sgd-g-12 font font-caslon-fine">
               <div class="font-name">Caslon fine</div>
               <div class="font-glyphs">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Xx Yy Zz Åå Ää Öö</div>
+              <div class="font-glyphs">"" ''</div>
               <div class="font-glyphs -pb">1234567890</div>
 
               <div class="font-glyphs -italic">Italic Aa Bb Cc 123</div>
@@ -126,6 +128,7 @@
             <div class="sgd-g-12 font font-caslon-caps">
               <div class="font-name">Caslon Caps</div>
               <div class="font-glyphs">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Xx Yy Zz Åå Ää Öö</div>
+              <div class="font-glyphs">"" ''</div>
               <div class="font-glyphs -pb">1234567890</div>
 
               <div class="font-glyphs -italic">Italic Aa Bb Cc 123</div>
@@ -137,6 +140,7 @@
             <div class="sgd-g-12 font font-copper">
               <div class="font-name">Copperplate</div>
               <div class="font-glyphs">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Xx Yy Zz Åå Ää Öö</div>
+              <div class="font-glyphs">"" ''</div>
               <div class="font-glyphs -pb">1234567890</div>
 
               <div class="font-glyphs -italic">Italic Aa Bb Cc 123</div>
