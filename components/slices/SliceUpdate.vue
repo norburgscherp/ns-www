@@ -3,7 +3,7 @@
 <div class="slice-update">
   <div class="updates" v-match-heights="{el: ['.slice-update h3', '.slice-update h4', '.slice-update h5', '.slice-update .text'] }">
 
-		<div v-for="(update, index) in slice.items" :key="update.id" class="update">
+		<div v-for="(update, index) in reverseUpdates" :key="update.id" class="update">
 
 			<template v-if="index <= updatesToShow -1">
 				<figure :style="{ backgroundImage: 'url(' + update.image.url + ')', backgroundPosition: ''+ update.image_focus +'' }"></figure>
@@ -33,6 +33,11 @@ export default {
       totalUpdates: 0,
       trigger: 0
     };
+  },
+  computed: {
+    reverseUpdates() {
+      return this.slice.items.slice().reverse();
+    }     
   },
   methods: {
   	showMore() {
