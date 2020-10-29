@@ -1,6 +1,9 @@
 {
   "ns": {
     "more_info": "Mer info",
+    "read_more": "Läs mer",
+    "read_less": "Läs mindre",
+    "load_more": "Visa fler",
     "no_image":"ingen bild",
     "no_name":"inget namn",
     "no_title":"ingen titel",

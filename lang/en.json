@@ -1,6 +1,9 @@
 {
   "ns": {
     "more_info": "More info",
+    "read_more": "Read more",
+    "read_less": "Read less",
+    "load_more": "Show more",
     "no_image":"no image",
     "no_name":"no name",
     "no_title":"no title",

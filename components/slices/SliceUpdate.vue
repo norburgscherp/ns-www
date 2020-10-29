@@ -6,15 +6,19 @@
 		<div v-for="(update, index) in reverseUpdates" :key="update.id" class="update">
 
 			<template v-if="index <= updatesToShow -1">
-				<figure :style="{ backgroundImage: 'url(' + update.image.url + ')', backgroundPosition: ''+ update.image_focus +'' }"></figure>
-	    	<prismic-rich-text class="header" :field="update.header"/>
-		    <prismic-rich-text class="text"  :field="update.text"/>
+				
+<!--         <figure :style="{ backgroundImage: 'url(' + update.image.url + ')', backgroundPosition: ''+ update.image_focus +'' }"></figure>
+        <prismic-rich-text class="header" :field="update.header"/>
+        <prismic-rich-text class="text"  :field="update.text"/> -->
+        <update :part="update" />
 			</template>
 			
 		</div>
 
+
+
 		<div class="load-more" v-if="updatesToShow < totalUpdates">
-			<a href="#" @click.prevent.stop="showMore()">Show more updates</a>
+			<a href="#" @click.prevent.stop="showMore()">{{ $t('ns.load_more') }}</a>
 		</div>
 		
   </div>	
@@ -24,8 +28,14 @@
 </template>
 
 <script>
+
+import update from '~/components/part/partUpdate.vue'
+
 export default {
   props: ['slice'],
+  components: {
+    update
+  },
   name: 'slice-update',
    data() {
     return {
@@ -73,14 +83,17 @@ export default {
   		float: left;
   		width: 100%;
   		a {
-	    	font-weight: 200;
-	      font-size: 15px;
-	      font-family: $font-caslon;
-	      line-height: 1.1;
-	      text-transform: uppercase;
-	      display: inline-block;
-	      color: $grey;
-	    }
+        font-family: CopperplateGothicLTPro-30AB, serif;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 15px;
+        letter-spacing: .1em;
+        color: $grey;
+        text-decoration: none;
+        &:hover {
+          text-decoration: none;
+        }
+      }
   	}
 
 
