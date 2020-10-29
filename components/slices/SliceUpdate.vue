@@ -96,6 +96,19 @@ export default {
 
   .update {
     margin-bottom: 45px;
+
+    a {
+      font-family: CopperplateGothicLTPro-30AB, serif;
+      text-transform: uppercase;
+      font-weight: 200;
+      font-size: 15px;
+      letter-spacing: .1em;
+      color: $grey;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
     
     figure {
       @include aspect-ratio-img(1,1);
@@ -114,7 +127,7 @@ export default {
     }
 
     .text {
-      font-size: 21px;
+      font-size: 21px;  
       font-family: $font-caslon;
     }
     
@@ -131,6 +144,18 @@ export default {
       }
 
     }
+    @include VP768 {
+      width: 33.33%;
+
+      .header > * {
+        // font-size: 15px;
+      }
+      .text {
+        // font-size: 14px;
+      }
+
+    }
+
 
     @include VP1280 {
       width: 25%;
