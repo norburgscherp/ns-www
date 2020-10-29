@@ -119,7 +119,7 @@ export default {
       color: $grey;
       text-decoration: none;
       &:hover {
-        text-decoration: none;
+        text-decoration: underline;
       }
     }
     
