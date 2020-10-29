@@ -8,6 +8,7 @@
 a {
     color: $link;
     outline: 0;
+    text-decoration: none;
 
     &:visited {
         color: $link;
@@ -15,6 +16,7 @@ a {
     &:hover,
     &:focus{
         color: $link-hover;
+        text-decoration: underline;
     }
     &:active {
         color: $link-click;
