@@ -111,11 +111,11 @@ export default {
     margin-bottom: 45px;
 
     a {
-      font-family: CopperplateGothicLTPro-30AB, serif;
-      text-transform: uppercase;
-      font-weight: 200;
-      font-size: 15px;
-      letter-spacing: .1em;
+      //font-family: CopperplateGothicLTPro-30AB, serif;
+      //text-transform: uppercase;
+      //font-weight: 200;
+      //font-size: 15px;
+      //letter-spacing: .1em;
       color: $grey;
       text-decoration: none;
       &:hover {
