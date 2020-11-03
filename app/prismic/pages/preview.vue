@@ -20,7 +20,6 @@ export default {
 
 <style lang="scss">
 .preview-overlay {
-  background-color: red;
   width: 100%;
   height: 100vh;
   position: fixed;
