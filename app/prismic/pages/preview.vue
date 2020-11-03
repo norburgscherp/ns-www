@@ -36,7 +36,7 @@ export default {
 }
 .box {
   width: 100%;
-  padding 50px 32px;
+  padding: 50px 32px;
   text-align: center;
 }
 img {
