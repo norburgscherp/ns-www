@@ -31,12 +31,15 @@ export default {
   text-align: center;
   z-index: 999;
   h4 {
+    text-align: center;
+    display: block;
     color: #1e232f;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 }
 .box {
   width: 100%;
-  padding: 50px 32px;
+  padding: 100px 32px;
   text-align: center;
 }
 img {
