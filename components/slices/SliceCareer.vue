@@ -23,7 +23,7 @@
 
             <!-- General text  -->
 
-            <div  class="text-general">
+            <div v-if="slice.items.length === 0"  class="text-general">
               <prismic-rich-text class="header" v-if="slice.primary.header[0].text !== ''" :field="slice.primary.header"/>
               <prismic-rich-text class="text" v-if="slice.primary.text[0].text !== ''" :field="slice.primary.text"/>
             </div>
