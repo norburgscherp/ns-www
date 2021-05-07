@@ -24,8 +24,8 @@
 
 export default {
   name: 'prsimic-all-dynamic-routes',
-  layout: 'dynamic-routes',
-
+  layout: 'clean',
+  
   async asyncData({ params, $prismic, error}) {
    
     const prismicAll = await $prismic.api.query('', { pageSize : 100 })

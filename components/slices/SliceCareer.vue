@@ -19,22 +19,17 @@
           <!-- TEXT -->
           <div class="slice-text">
             
-          
-
             <!-- General text  -->
-
-            <div v-if="slice.items.length === 0"  class="text-general">
-              <prismic-rich-text class="header" v-if="slice.primary.header[0].text !== ''" :field="slice.primary.header"/>
+            <div v-if="slice.items.length > 0" class="text text-general">
+              <prismic-rich-text class="header" v-if="slice.primary.header.text" :field="slice.primary.header"/>
               <prismic-rich-text class="text" v-if="slice.primary.text[0].text !== ''" :field="slice.primary.text"/>
             </div>
            
-
             <!-- Job opnenings -->
-
              <div v-if="slice.items.length > 0" class="text text-general">
               <div v-for="(job, index) in slice.items" :key="job.id" class="job">
-                <prismic-rich-text class="header" v-if="job.header[0].text !== ''" :field="job.header"/>
-                <prismic-rich-text class="text" v-if="job.job_opening[0].textt !== ''" :field="job.job_opening"/>
+                 <prismic-rich-text class="header" v-if="job.header" :field="job.header"/>
+               <prismic-rich-text class="text" v-if="job.job_opening" :field="job.job_opening"/>
               </div>
             </div>
        

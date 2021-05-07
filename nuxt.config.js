@@ -124,6 +124,11 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    babel: {
+      presets({ isServer }, [preset, options]) {
+        options.loose = true
+      },
+    },
     extend(config, ctx) {
       config.resolve.alias['vue'] = 'vue/dist/vue.common'
     }
