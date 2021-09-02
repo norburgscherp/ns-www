@@ -4,6 +4,8 @@
 ///////////////////////
 
   .slice-layout-two-col {
+
+
     
     .slice-body {}
     .col {}
@@ -75,6 +77,28 @@
         float: left;
         padding: 0 8px;
       }
+
+      &.slice-about,
+      &.slice-career {
+        .col { 
+          float: none;
+          padding: 0;
+        }
+        .slice-image {
+          @include aspect-ratio-img(28,5);
+        }
+        .col-1 {
+          width: 100%;
+          max-width: 1400px;
+          margin: 0 auto;
+        }
+        .col-2 {
+          width: 80%;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+      }
+
     }
 
     @include VP768 {
@@ -86,6 +110,9 @@
         float: left;
         padding: 0 15px;
       }
+
+
+
     }
 
     @include VP1024 {
