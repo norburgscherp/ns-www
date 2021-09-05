@@ -13,7 +13,6 @@
 
           <mq-layout mq="mobile">
             <prismic-image :field="slice.primary.image_2.small"/>
-            <img :src="slice.primary.image_2.small.url">
           </mq-layout>
           <mq-layout mq="phablet+">
             <prismic-image :field="slice.primary.image_2"/>

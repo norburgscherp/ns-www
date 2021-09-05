@@ -8,7 +8,12 @@
 
           <!-- IMAGE -->
           <figure class="slice-image">
-            <prismic-image :field="slice.primary.image"/>
+            <mq-layout mq="mobile">
+              <prismic-image :field="slice.primary.image_2.small"/>
+            </mq-layout>
+            <mq-layout mq="phablet+">
+              <prismic-image :field="slice.primary.image_2"/>
+            </mq-layout>
           </figure>
         
       </div>
@@ -18,21 +23,30 @@
 
           <!-- TEXT -->
           <div class="slice-text">
-            
-            <!-- General text  -->
 
-            <div class="text text-general">
-              <prismic-rich-text class="header" v-if="slice.primary.header.text" :field="slice.primary.header"/>
-              <prismic-rich-text class="text" v-if="slice.primary.text" :field="slice.primary.text"/>
-            </div>
-           
-            <!-- Job opnenings -->
-             <div v-if="slice.items.length > 0" class="text text-general">
+            <!-- Job openings -->
+<!--              <div class="text text-general">
+              <div class="job">
+                 <div class="header">BITRÄDANDE JURIST SÖKES</div>
+                  <div class="text">Vi söker nu ytterligare en biträdande jurist till vår verksamhet. Vi söker dig som är nyutexaminerad från juristutbildningen eller har avslutat din tingstjänstgöring. Vi tror att du gillar juridik och att du är en engagerad, analytisk, noggrann och ambitiös person som är bra på att uttrycka dig på svenska och engelska. Du är självständig, framåt och har en positiv och lösningsorienterad attityd.</div>
+              </div>
+            </div> -->
+
+            <div v-if="slice.items.length > 0" class="text text-general">
               <div v-for="(job, index) in slice.items" :key="job.id" class="job">
                  <prismic-rich-text class="header" v-if="job.header" :field="job.header"/>
                <prismic-rich-text class="text" v-if="job.job_opening" :field="job.job_opening"/>
               </div>
             </div>
+
+            
+            <!-- General text  -->
+            <div class="text text-general">
+              <prismic-rich-text class="header" v-if="slice.primary.header.text" :field="slice.primary.header"/>
+              <prismic-rich-text class="text" v-if="slice.primary.text" :field="slice.primary.text"/>
+            </div>
+           
+
        
           </div>
 
@@ -57,6 +71,14 @@ export default {
   	.job,
     .text-general {
   		margin-bottom: 30px;
+
+      .header {
+        font-family: $font-copper;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 15px;
+        letter-spacing: .1em;
+      }
   	}
 
     figure {
