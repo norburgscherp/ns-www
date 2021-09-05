@@ -8,8 +8,17 @@
       <div class="col-1 col">
 
         <!-- IMAGE -->
+
         <figure class="slice-image">
-          <prismic-image :field="slice.primary.image"/>
+
+          <mq-layout mq="mobile">
+            <prismic-image :field="slice.primary.image_2.small"/>
+            <img :src="slice.primary.image_2.small.url">
+          </mq-layout>
+          <mq-layout mq="phablet+">
+            <prismic-image :field="slice.primary.image_2"/>
+          </mq-layout>
+          
         </figure>
         
       </div>
@@ -20,7 +29,6 @@
         <!-- TEXT -->
         <div class="slice-text">
 
-          <prismic-rich-text class="header" :field="slice.primary.header"/>
           <prismic-rich-text class="text" :field="slice.primary.text"/>
 
           <!-- ACCORDION - SAID -->

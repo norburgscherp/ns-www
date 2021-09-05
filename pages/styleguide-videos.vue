@@ -95,7 +95,7 @@
               <div class="sgd-g-6">
                 <h4>&nbsp;</h4>
                 <video width="320" height="240" controls>
-                <source src="https://activetalents.se/waterslowenhielm/ns/videos/media.webm" type="video/webm">
+                <source src="https://activetalents.se/waterslowenhielm/ns/videos/lang.webm" type="video/webm">
                 Your browser does not support the video tag.
                 </video>
               </div>
