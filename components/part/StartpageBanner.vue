@@ -54,8 +54,8 @@ export default {
   
   height: 100vh;
   backface-visibility: hidden;
-  background-size: cover;
-  background-position: center center; 
+  background-size: 1250px;
+  background-position: center 100%; 
   border-bottom: 15px solid $white;
   color: $white;
   text-align: center;
@@ -141,6 +141,9 @@ export default {
   }
 
   @include VP600 {
+
+    background-size: cover;
+    background-position: center center; 
 
     .description {
       transition: all 0s ease-in-out;

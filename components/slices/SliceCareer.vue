@@ -9,7 +9,7 @@
           <!-- IMAGE -->
           <figure class="slice-image">
             <mq-layout mq="mobile">
-              <prismic-image :field="slice.primary.image_2.small"/>
+              <prismic-image :field="slice.primary.image"/>
             </mq-layout>
             <mq-layout mq="phablet+">
               <prismic-image :field="slice.primary.image_2"/>
