@@ -151,6 +151,10 @@ export default {
       transition: all 0s ease-in-out;
     }
 
+    figure {
+      display: none;
+    }
+
   }
 
 
