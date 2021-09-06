@@ -114,7 +114,8 @@ export default {
   },
 
   svgSprite: {
-    input: '~/assets/icons/'
+    input: '~/assets/icons/',
+    elementClass: 'ns-icon'
   },
 
   /*

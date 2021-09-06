@@ -1,20 +1,27 @@
 <template>
-    <section class="startpage-banner" :style="{ backgroundImage: 'url(' + banner.image.url + ')' }">
+    <section class="startpage-banner" 
+      :class="{'-show-mobile-text' : showMobileText}"
+      :style="{ backgroundImage: 'url(' + banner.image.url + ')' }">
 
       <div class="container ">
         
         <h2 class="title">
           {{ $prismic.asText(banner.title) }}
-          
         </h2>
+        
+        <mq-layout mq="mobile">
+          <figure v-on:click="showMobileText = !showMobileText">
+            <svg-icon name="plus" />
+          </figure>
+        </mq-layout>
 
-        <p class="description">
-          <!-- {{ $prismic.asText(banner.text) }} -->
+        <div class="description">
           <prismic-rich-text :field="banner.text"/>
-        </p>
+        </div>
 
       </div>
-      <!-- <div class="banner-overlay"></div> -->
+
+      <mq-layout mq="mobile" class="banner-overlay"></mq-layout>
 
     </section>
 </template>
@@ -23,6 +30,21 @@
 export default {
   props: ['banner'],
   name: 'startpage-banner',
+   data() {
+    return {
+      showMobileText: false
+    };
+  },
+ mounted() {
+   window.addEventListener('resize', () => {
+    if (this.$mq === 'mobile'){
+       this.showMobileText = false;
+    }
+   })
+ },
+ beforeDestroy() {
+  window.removeEventListener('resize' ,null);
+ },
 }
 </script>
 
@@ -41,21 +63,41 @@ export default {
   max-height: 860px;
   position: relative;
 
+  figure {
+    padding: 24px;
+    margin: -24px 0 -12px;
+    display: inline-block;
+    
+  }
+  svg {
+    fill: $white;
+    height: 24px;
+    width: 24px;
+    transition: all .275s ease-in-out;
+    transform-origin: center;
+    transform: rotate(0deg);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+
   .container {
     position: relative;
     z-index: 3;
   }
 
-  // .banner-overlay {
-  //   position: absolute;
-  //   z-index: 2;
-  //   height: 100%;
-  //   width: 100%;
-  //   top: 0;
-  //   left: 0;
-  //   background: #561b15;
-  //   opacity: 0.58;
-  // }
+  .banner-overlay {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(71,30,40,.9);
+    opacity: 0;
+    transition: all .275s ease-in-out;
+  }
 
 
   .title {
@@ -79,6 +121,8 @@ export default {
     margin: 0 auto ;
     padding: 0 20px 20px;
     max-width: 760px;
+    transition: all .275s ease-in-out;
+    opacity: 0;
     // text-shadow: 0px 0px 3px black,  0 0 6px black, 0px 0px 9px black,  0 0 12px black;
 
     em, i {
@@ -86,10 +130,25 @@ export default {
     }
   }
 
+  &.-show-mobile-text {
+    .banner-overlay,
+    .description {
+      opacity: 1;
+    }
+    figure svg{
+      transform: rotate(45deg);
+    }
+  }
+
   @include VP600 {
 
-    .banner-overlay {
-      display: none;
+    .description {
+      transition: all 0s ease-in-out;
+      opacity: 1;
+    }
+
+    figure svg {
+      transition: all 0s ease-in-out;
     }
 
   }
