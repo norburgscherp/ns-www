@@ -19,9 +19,14 @@
           <prismic-rich-text :field="banner.text"/>
         </div>
 
+
+
       </div>
 
       <mq-layout mq="mobile" class="banner-overlay"></mq-layout>
+      <mq-layout mq="mobile" class="image-mobile">
+        <prismic-image  :field="banner.image_mobile"/>
+      </mq-layout>
 
     </section>
 </template>
@@ -62,6 +67,23 @@ export default {
   overflow: hidden;
   max-height: 860px;
   position: relative;
+
+  .image-mobile {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    img {
+      position: absolute;
+       height: 100%;
+    width: auto;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    }
+   
+  }
 
   figure {
     padding: 24px;
