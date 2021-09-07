@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'-menu-open': this.$store.getters.GET_MENU}">
+  <div :class="{'-menu-open': this.$store.getters.GET_MENU, '-portrait': this.orientation === 'p', '-landscape': this.orientation === 'l'}">  
     <site-header/>
     <nuxt />
     <site-footer/>
@@ -15,7 +15,6 @@ export default {
     SiteHeader,
     SiteFooter
   },
-
   head () {
 
     let meta = [] 
@@ -38,6 +37,31 @@ export default {
       meta: meta,
     }
     
+  },
+  data () {
+    return {
+      orientation: null
+    }
+  },
+  methods: {
+    onResize(event) {
+      this.deviceOrientation()
+    },
+    deviceOrientation() {
+      let winH = window.innerHeight;
+      let winW = window.innerWidth;
+      if (winH > winW && this.orientation !== 'p') {
+        this.orientation = 'p'
+        this.$store.commit("setOrientation",'portrait')
+      } else if (winW > winH && this.orientation !== 'l'){
+        this.orientation = 'l'
+        this.$store.commit("setOrientation",'landscape')
+      }
+    }
+  },
+  mounted() {
+    window.addEventListener('resize', this.onResize)
+    this.deviceOrientation();  
   },
   // Called before rendering the layout (even for error page)
   async middleware({ store, $prismic, app }) {

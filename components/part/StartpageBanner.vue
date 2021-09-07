@@ -68,6 +68,12 @@ export default {
   max-height: 860px;
   position: relative;
 
+  .-landscape &{
+    .image-mobile {
+      display: none;
+    }
+  }
+
   .image-mobile {
     position: absolute;
     height: 100%;
