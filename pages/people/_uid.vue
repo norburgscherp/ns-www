@@ -521,9 +521,9 @@ export default {
       }
 
       .col-image {
-        width: 270px;
+        width: 260px;
         img {
-          width: 270px;
+          width: 260px;
         }
       }
 
