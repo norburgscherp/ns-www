@@ -173,6 +173,10 @@ export default {
     background-size: cover;
     background-position: center center; 
 
+    .image-mobile {
+      display: none;
+    }
+
     .description {
       transition: all 0s ease-in-out;
       opacity: 1;

@@ -1,5 +1,14 @@
 {
   "ns": {
+    "biography": "Biografi",
+    "notable": "Uppdrag",  
+    "experience": "Erfarenhet",
+    "education": "Utbildning",
+    "memberships": "Medlemskap",  
+    "email": "Email",
+    "phone": "Tel",
+    "mobile": "Mobil",
+    "cv": "Ladda ner cv",
     "more_info": "Mer info",
     "read_more": "Läs mer",
     "read_less": "Läs mindre",
