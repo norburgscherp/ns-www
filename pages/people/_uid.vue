@@ -35,7 +35,6 @@
             </div>
           </div>
 
-
           <div class="details">
 
             <!-- EMAIL -->
@@ -76,11 +75,9 @@
 
           </div>
 
-
-
           <mq-layout :mq="['mobile', 'phablet', 'tablet']" class="person-info">
                             <!-- BIOAGRAPHY -->
-              <template v-if="doc.biography.length > 0">
+              <template v-show="doc.biography.length > 0">
                 <div class="info-item" :class="{'-active' : showBio}">
                   <div class="info-item-header" @click="showBio = !showBio">{{ $t('ns.biography') }}</div>
                   <div class="info-item-text">
@@ -90,7 +87,7 @@
               </template>
 
               <!-- EXPERIENCE -->
-              <template v-if="doc.experience.length > 0">
+              <template v-show="doc.experience.length > 0">
                 <div class="info-item" :class="{'-active' : showExp}">
                   <div class="info-item-header" @click="showExp = !showExp">{{ $t('ns.experience') }}</div>
                   <div class="info-item-text">
@@ -100,7 +97,7 @@
               </template>
 
               <!-- NOTABLE REPRESENTATIONS -->
-              <template v-if="doc.notable.length > 0">
+              <template v-show="doc.notable.length > 0">
                 <div class="info-item" :class="{'-active' : showNot}">
                   <div class="info-item-header" @click="showNot = !showNot">{{ $t('ns.notable') }}</div>
                   <div class="info-item-text">
@@ -110,7 +107,7 @@
               </template>
 
               <!-- EDUCATION -->
-              <template v-if="doc.education.length > 0">
+              <template v-show="doc.education.length > 0">
                 <div class="info-item" :class="{'-active' : showEdu}">
                   <div class="info-item-header"  @click="showEdu = !showEdu" >{{ $t('ns.education') }}</div>
                   <div class="info-item-text">
@@ -120,7 +117,7 @@
               </template>
 
               <!-- MEMBERSHIPS -->
-              <template v-if="doc.memberships.length > 0">
+              <template v-show="doc.memberships.length > 0">
                 <div class="info-item" :class="{'-active' : showMem}">
                   <div class="info-item-header" @click="showMem = !showMem">{{ $t('ns.memberships') }}</div>
                   <div class="info-item-text">
