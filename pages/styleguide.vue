@@ -111,9 +111,9 @@ Our priority is always to deliver high-quality service and the best possible res
 
             <div class="sgd-g-12 font">
               <div class="font-copper">
-                <strong>Our core values - bold - Caslon</strong><br>
-                <strong class="weight-600">Our core values - 600 - Caslon</strong>
-                <div class="weight-normal">Our core values - normal - Caslon</div>
+                <strong>Our core values - bold - Copper</strong><br>
+                <strong class="weight-600">Our core values - 600 - Copper</strong>
+                <div class="weight-normal">Our core values - normal - Copper</div>
               </div>
 Our priority is always to deliver high-quality service and the best possible results for our clients in their disputes. 
             </div>  
