@@ -97,6 +97,28 @@
         <section class="sgd-s-typography " id="to-sgd-typography" >
           <div class="sgd-gc">
             <div class="sgd-g-12">
+              <h2 class="sgd-header -type -brand">Bold lab</h2>
+            </div>
+
+            <div class="sgd-g-12 font">
+              <div class="font-caslon">
+                <strong>Our core values - bold - Caslon</strong><br>
+                <strong class="weight-600">Our core values - 600 - Caslon</strong>
+                <div class="weight-normal">Our core values - normal - Caslon</div>
+              </div>
+Our priority is always to deliver high-quality service and the best possible results for our clients in their disputes. 
+            </div> 
+
+            <div class="sgd-g-12 font">
+              <div class="font-copper">
+                <strong>Our core values - bold - Caslon</strong><br>
+                <strong class="weight-600">Our core values - 600 - Caslon</strong>
+                <div class="weight-normal">Our core values - normal - Caslon</div>
+              </div>
+Our priority is always to deliver high-quality service and the best possible results for our clients in their disputes. 
+            </div>  
+
+                       <div class="sgd-g-12">
               <h2 class="sgd-header -type -brand">Fonts</h2>
             </div>
 
