@@ -9,7 +9,7 @@
     </section>
 
 
-    <section class="slice-persons" v-match-heights="{el: ['.person'] }">
+    <section class="slice-persons" v-match-heights="{el: ['.slice-persons .person'] }">
    
       <div v-for="(person, index) in persons" :key="person.id" class="person" >
   
