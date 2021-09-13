@@ -69,11 +69,13 @@
       font-size: 27px;
     }
 
+    em, i {
+      font-family: $body-font;
+      font-style: italic;
+    }
+
   }
 
-  em {
-    font-style: normal!important;
-  }
 
 
   // HEADERS
