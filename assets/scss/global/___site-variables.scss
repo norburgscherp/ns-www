@@ -31,7 +31,7 @@ $link-click: $grey;
 $font-system: 		"-apple-system", BlinkMacSystemFont, "Apple Color Emoji", “Segoe UI”, Roboto, “Helvetica Neue”, Helvetica, Arial, sans-serif;
 
 $font-caslon: 		CaslonFiveFortyLT-Roman, sans-serif;
-$font-caslon-fine: 	CaslonFiveFortyLT-Italic, serif;
+$font-caslon-fine: 	$font-caslon;
 $font-caslon-caps: 	CaslonFiveForty-RomanSC, serif;
 $font-copper: 		CopperplateGothicLTPro-30AB, serif;
 
