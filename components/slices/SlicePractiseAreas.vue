@@ -727,7 +727,8 @@ export default {
       }
       .quote-text {
         font-size: 32px;
-        font-family: $font-caslon-fine;
+        font-family: $font-caslon;
+        font-style: italic;
         letter-spacing: -1px;
         margin-bottom: 0px;
 
