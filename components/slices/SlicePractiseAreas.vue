@@ -90,8 +90,28 @@
                   <!-- CONTACT DEATILS -->
                   <div v-if="person.data.contact.length > 0 "  class="contact">
                     <div class="arrow"></div>
+
                     <div class="info">
-                      <prismic-rich-text :field="person.data.contact"/>
+
+                      <!-- EMAIL -->
+                      <template v-if="person.data.email.length > 0">
+                        <div><span>{{ $t('ns.email') }}:</span> <a :href="'mailto:' + person.data.email[0].text" target="_blank">{{person.data.email[0].text}}</a></div>
+                      </template>
+
+                      <!-- TEL-->
+                      <template v-if="person.data.tel.length > 0">
+                        <div><span>{{ $t('ns.phone') }}:</span> <a :href="'tel:' + person.data.tel[0].text" target="_blank">{{person.data.tel[0].text}}</a></div>
+                      </template>
+
+                      <!-- MOBILE -->
+                      <template v-if="person.data.mobile.length > 0">
+                        <div><span>{{ $t('ns.mobile') }}:</span> <a :href="'tel:' + person.data.mobile[0].text" target="_blank">{{person.data.mobile[0].text}}</a></div>
+                      </template>
+                     
+                       <!-- LINKEDIN -->
+                      <template v-if="person.data.linkedin">
+                        <a :href="person.data.linkedin.url" target="_blank">Linkedin</a> <br>
+                      </template> 
                     </div>
                   </div>
                   <div v-else class="contact">
@@ -670,6 +690,14 @@ export default {
             text-transform: uppercase;
             line-height: 1.5;
             letter-spacing: .1em;
+          }
+
+          span {
+            font-weight: bold;
+          }
+
+          a {
+            color: $black;
           }
 
         }
