@@ -154,9 +154,9 @@ export default {
     // text-shadow: 0px 0px 3px black,  0 0 6px black, 0px 0px 9px black,  0 0 12px black;
 
     em, i {
-      font-family: $font-caslon;
-      font-style: italic;
-    }
+    font-family: $font-caslon-italic !important;
+    font-style: normal!important;
+  }
   }
 
   &.-show-mobile-text {
