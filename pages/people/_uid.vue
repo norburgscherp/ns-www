@@ -511,7 +511,7 @@ export default {
       .info-item-header {
         border: none;
         font-size: 12px;
-        padding-right: 4px;
+        padding-right: 2px;
         &:hover { 
           color: $black;
         }
