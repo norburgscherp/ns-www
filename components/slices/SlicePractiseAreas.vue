@@ -26,7 +26,7 @@
 
           <div class="quote"v-if="slice.primary.quote[0].text">
             <div class="quote-text">
-              ”{{slice.primary.quote[0].text.replace(/['"]+/g, '')}}”
+              ”{{slice.primary.quote[0].text.replace(/['"”]+/g, '')}}”
             </div>
             <prismic-rich-text class="quote-note" :field="slice.primary.quote_note"/>
           </div>
