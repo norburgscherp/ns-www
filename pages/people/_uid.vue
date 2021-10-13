@@ -293,6 +293,10 @@ export default {
 
 .site-page-person {
 
+  ul {
+    padding-left: 12px;
+  }
+
   .person-info {
     padding: 12px 0 32px;
   }
