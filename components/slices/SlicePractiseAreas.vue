@@ -25,8 +25,9 @@
           <prismic-rich-text class="text" :field="slice.primary.text"/>
 
           <div class="quote"v-if="slice.primary.quote[0].text">
-
-            <prismic-rich-text class="quote-text" :field="slice.primary.quote"/>
+            <div class="quote-text">
+              ”{{slice.primary.quote[0].text.replace(/['"]+/g, '')}}”
+            </div>
             <prismic-rich-text class="quote-note" :field="slice.primary.quote_note"/>
           </div>
           
@@ -755,8 +756,8 @@ export default {
       }
       .quote-text {
         font-size: 32px;
-        font-family: $font-caslon;
-        font-style: italic;
+        font-family: $font-caslon-italic;
+        font-style: normal;
         letter-spacing: -1px;
         margin-bottom: 0px;
 
