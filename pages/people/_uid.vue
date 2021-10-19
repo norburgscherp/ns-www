@@ -129,23 +129,42 @@
 
 
 
+
+
             <mq-layout mq="desktop+" class="person-info -desktop">
               <div class="info-tab-headers">
-                  <div class="info-item" :class="{'-active' : showBio}" v-if="doc.biography.length > 0">
+
+                <template v-if="doc.biography.length > 0">
+                  <div class="info-item" :class="{'-active' : showBio}" v-if="doc.biography[0].text !== '' ">
                     <div class="info-item-header" @click="reset(); showBio = !showBio">{{ $t('ns.biography') }}</div>
                   </div>
-                  <div class="info-item" :class="{'-active' : showNot}" v-if="doc.notable.length > 0">
+                </template>
+
+                <template v-if="doc.notable.length > 0">
+                  <div class="info-item" :class="{'-active' : showNot}" v-if="doc.notable[0].text !== '' ">
                     <div class="info-item-header" @click="reset(); showNot = !showNot">{{ $t('ns.notable') }}</div>
                   </div>
-                  <div class="info-item" :class="{'-active' : showExp}" v-if="doc.experience.length > 0">
+                </template>
+
+                <template v-if="doc.experience.length > 0">
+                  <div class="info-item" :class="{'-active' : showExp}" v-if="doc.experience[0].text !== '' ">
                     <div class="info-item-header" @click="reset(); showExp = !showExp">{{ $t('ns.experience') }}</div>
-                  </div>
-                  <div class="info-item" :class="{'-active' : showEdu}" v-if="doc.education.length > 0">
+                  </div>                    
+                </template >
+
+
+                <template v-if="doc.education.length > 0">
+                  <div class="info-item" :class="{'-active' : showEdu}" v-if="doc.education[0].text !== '' ">
                     <div class="info-item-header" @click="reset(); showEdu = !showEdu">{{ $t('ns.education') }}</div>
-                  </div>
-                  <div class="info-item" :class="{'-active' : showMem}" v-if="doc.memberships.length > 0">
+                  </div>                    
+                </template>
+
+                <template v-if="doc.memberships.length > 0">
+                  <div class="info-item" :class="{'-active' : showMem}" v-if="doc.memberships[0].text !== '' ">
                     <div class="info-item-header" @click="reset(); showMem = !showMem">{{ $t('ns.memberships') }}</div>
-                  </div>
+                  </div>                    
+                </template>
+
               </div>
               <div class="info-tab-content">
                 <div class="info-item-text" :class="{'-show' : showBio}">
@@ -175,26 +194,6 @@
           </div>
           
 
-
-          <!-- OLD -->
-
-
-         <!-- CONTACT -->
-<!--          <prismic-rich-text v-if="doc.contact.length > 0 "  class="contact" :field="doc.contact"/>
-          <div v-else class="contact">
-            <div>
-                ({{ $t('ns.no_contact') }})
-            </div>
-          </div>
- -->
-          <!-- Downloads -->
-          <!-- <prismic-rich-text v-if="doc.downloads.length > 0 "  class="downloads" :field="doc.downloads"/> -->
-
-          <!-- TEXT -->
-          <!-- <prismic-rich-text v-if="doc.text.length > 0 && !doc.text.length === '(text)' "  class="text person-text -hide-mobile" :field="doc.text"/> -->
-
-          <!-- DETAILS-->
-          <!-- <prismic-rich-text v-if="doc.details.length > 0 "  class="details text -hide-mobile" :field="doc.details"/>  -->
 
       </div>  
      
