@@ -294,6 +294,7 @@ export default {
 
   ul {
     padding-left: 12px;
+    margin-top: 0;
   }
 
   .person-info {
