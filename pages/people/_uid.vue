@@ -38,20 +38,32 @@
           <div class="details">
 
             <!-- EMAIL -->
-            <template v-if="doc.email.length > 0">
-              {{ $t('ns.email') }}: <a :href="'mailto:' + doc.email[0].text" target="_blank">{{doc.email[0].text}}</a> <br>
+            <template v-if="doc.email">
+              <template v-if="doc.email.length > 0 && doc.email[0].text">
+                {{ $t('ns.email') }}: <a :href="'mailto:' + doc.email[0].text" target="_blank">{{doc.email[0].text}}</a> <br>
+              </template>
             </template>
 
             <!-- TEL-->
-            <template v-if="doc.tel.length > 0">
-              {{ $t('ns.phone') }}: <a :href="'tel:' + doc.tel[0].text" target="_blank">{{doc.tel[0].text}}</a> <br>
+            <template v-if="doc.tel">
+              <template v-if="doc.tel.length > 0 && doc.tel[0].text">
+                {{ $t('ns.phone') }}: <a :href="'tel:' + doc.tel[0].text" target="_blank">{{doc.tel[0].text}}</a> <br>
+              </template>
             </template>
 
             <!-- MOBILE -->
-            <template v-if="doc.mobile.length > 0">
-              {{ $t('ns.mobile') }}: <a :href="'tel:' + doc.mobile[0].text" target="_blank">{{doc.mobile[0].text}}</a> <br>
+            <template v-if="doc.mobile">
+              <template v-if="doc.mobile.length > 0 && doc.mobile[0].text ">
+                {{ $t('ns.mobile') }}: <a :href="'tel:' + doc.mobile[0].text" target="_blank">{{doc.mobile[0].text}}</a> <br>
+              </template>
             </template>
 
+            <!-- DIRECT -->
+            <template v-if="doc.direct">
+              <template v-if="doc.direct.length > 0 && doc.direct[0].text">
+                {{ $t('ns.direct') }}: <a :href="'tel:' + doc.direct[0].text" target="_blank">{{doc.direct[0].text}}</a> <br>
+              </template>
+            </template>
             
             <div class="links">
             
