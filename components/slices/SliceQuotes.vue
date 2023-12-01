@@ -36,7 +36,7 @@ export default {
       margin: 45px 0 45px; 
       .quote-text {
         font-size: 32px;
-        font-family: $font-caslon-italics;
+        font-family: $font-caslon-italic;
         font-style: normal;
         letter-spacing: -1px;
         margin-bottom: 0px;
