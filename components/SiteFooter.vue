@@ -95,7 +95,6 @@ export default {
 <style lang="scss">
   
 .site-footer {
-
   margin: 20px 0 40px;
   text-align: center;
   font-family: $font-copper;

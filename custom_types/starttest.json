@@ -7,7 +7,7 @@
         "label" : "Menu name"
       }
     },
-    "startpage_banner2" : {
+    "startpage_banner" : {
       "type" : "Group",
       "config" : {
         "fields" : {
@@ -39,7 +39,7 @@
             }
           }
         },
-        "label" : "Startpage Banner 2",
+        "label" : "Startpage Banner",
         "repeat" : false
       }
     }

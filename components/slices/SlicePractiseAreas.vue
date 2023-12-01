@@ -1,543 +1,69 @@
 <template>
   <section class="slice-practise-areas slice-layout-two-col">
     <div class="slice-body row">
-      
       <!-- COL-1 -->
       <div class="col-1 col">
-
         <!-- IMAGE -->
         <figure class="slice-image">
           <prismic-image :field="slice.primary.image"/>
         </figure>
-        
       </div>
-
       <!-- COL-2 -->
       <div class="col-2 col">
-
         <!-- TEXT -->
         <div class="slice-text">
-
-          <template v-if="slice.primary.header[0].text">
-            <prismic-rich-text class="header" :field="slice.primary.header"/> 
-          </template>
-          
           <prismic-rich-text class="text" :field="slice.primary.text"/>
-
-          <div class="quote"v-if="slice.primary.quote[0].text">
-            <div class="quote-text">
-              ”{{slice.primary.quote[0].text.replace(/['"”]+/g, '')}}”
-            </div>
-            <prismic-rich-text class="quote-note" :field="slice.primary.quote_note"/>
-          </div>
-          
         </div>
-        
       </div>
-
-    </div>
-
-    <div class="slice-body contact-body -border-top" v-if="persons.length > 0">
-      <div class="row">
-
-        <div class="col-1 col">
-           
-            <!-- HEADER-->
-            <prismic-rich-text class="contact-header" v-if="slice.primary.contact_header[0].text" :field="slice.primary.contact_header" />
-
-            <!-- PERSONS -->
-            <div class="slice-persons" :class="{'-show-person-contact': showPersonActive}">
-              <div v-for="(person, index) in persons" 
-                  :data-person-number="index"
-                  :key="person.id" class="person" 
-                  v-match-heights="{el: ['.person figure', '.person'], disabled: [100] }" 
-                  :class="[{'-active': index === showPersonContact}]">
-                  
-                  <!-- IMAGE -->     
-                  <figure v-if="person.data.image.url">
-                    <prismic-image  :field="person.data.image"/>
-                  </figure>
-                  <figure v-else class="-no-image">
-                    <template v-if="person.data.name.length > 0 ">
-                      <prismic-rich-text class="title" :field="person.data.name"/>
-                    </template>
-                    <div v-else class="title">
-                       ({{ $t('ns.no_image') }})
-                    </div>
-                  </figure>
-
-                  <!-- NAME -->
-                  <div v-if="person.data.name.length > 0 "  class="name">
-                      <h3>{{person.data.name[0].text}}</h3>
-                  </div>
-                  <div v-else class="name">
-                    <h3>({{ $t('ns.no_name') }})</h3>
-                  </div>
-
-                  <!-- TITLE -->
-                  <div v-if="person.data.title.length > 0 "  class="title">
-                      <h3>{{person.data.title[0].text}}</h3>
-                  </div>
-                  <div v-else class="title">
-                    <h3>({{ $t('ns.no_title') }})</h3>
-                  </div>
-
-                  <!-- LINK -->
-                  <div class="link" @click.prevent="toggleContactDetails(index)">
-                    {{ $t('ns.contact') }}
-                  </div>
-
-
-                  <!-- CONTACT DEATILS -->
-                  <div v-if="person.data.contact.length > 0 "  class="contact">
-                    <div class="arrow"></div>
-
-                    <div class="info">
-
-                      <!-- EMAIL -->
-                      <template v-if="person.data.email.length > 0">
-                        <div><span>{{ $t('ns.email') }}:</span> <a :href="'mailto:' + person.data.email[0].text" target="_blank">{{person.data.email[0].text}}</a></div>
-                      </template>
-
-                      <!-- TEL-->
-                      <template v-if="person.data.tel.length > 0">
-                        <div><span>{{ $t('ns.phone') }}:</span> <a :href="'tel:' + person.data.tel[0].text" target="_blank">{{person.data.tel[0].text}}</a></div>
-                      </template>
-
-                      <!-- MOBILE -->
-                      <template v-if="person.data.mobile.length > 0">
-                        <div><span>{{ $t('ns.mobile') }}:</span> <a :href="'tel:' + person.data.mobile[0].text" target="_blank">{{person.data.mobile[0].text}}</a></div>
-                      </template>
-                     
-                       <!-- LINKEDIN -->
-                      <template v-if="person.data.linkedin">
-                        <a :href="person.data.linkedin.url" target="_blank">Linkedin</a> <br>
-                      </template> 
-                    </div>
-                  </div>
-                  <div v-else class="contact">
-                    <div class="arrow"></div>
-                    <div class="info">
-                      <h3>({{ $t('ns.no_contact') }})</h3>  
-                    </div>
-                  </div>
-
-
-         
-              </div>             
-            </div>
-
-
-        </div>
-        <div class="col-2 col"></div>
-
-
-      </div>
-    </div>
-
-
+    </div>     
   </section>
 </template>
 
 <script>
 export default {
-  props: ['slice', 'persons'],
+  props: ['slice'],
   name: 'slice-practise-areas',
-  data () {
+  data() {
     return {
-      showPersonContact: false,
-      showPersonActive: false
-    }
+      showLinks: false,
+      menuEn: this.$store.getters.GET_MENUPRACTISE_EN,
+      menuSv: this.$store.getters.GET_MENUPRACTISE_SV,
+    };
   },
-  methods: {
-    toggleContactDetails: function(id){
-
-
-      let i
-      let _per = document.querySelectorAll("[data-person-number]"); 
-      let per = document.querySelectorAll("[data-person-number='"+id+"']")[0]; 
-      let perH = per.clientHeight; 
-      let perY = per.offsetTop; 
-
-      let con = per.querySelectorAll(".info")[0]
-      let conH = con.clientHeight;
-
-      if (id === this.showPersonContact) {
-        this.showPersonContact = false
-        this.showPersonActive = false
-      } else {
-        this.showPersonContact = id
-        this.showPersonActive = true
-      }
-
-      // Clean loop. 
-      for ( i = 0; i < _per.length; i++ ) {
-        console.log(i)
-        _per[i].classList.remove("border");
-        _per[i].style.marginBottom = "20px"; 
-      }
-
-      if (this.showPersonActive) {
-
-          if (this.$mq === "mobile"){
-
-            console.log('mobile test')
-
-              if (id === 0 || id === 1){
-  
-                    if (_per[0]) {
-                      _per[0].style.marginBottom = conH+15+"px"; 
-                      setTimeout(() => {
-                        _per[0].classList.add("border");
-                      },5);
-                    }
-
-                    if (_per[1]) {
-                      _per[1].style.marginBottom = conH+15+"px"; 
-                      setTimeout(() => {
-                        _per[1].classList.add("border");
-                      },5);
-                    }
-
-               } else if (id === 2 || id === 3){
-
-                    if (_per[2]) {
-                      _per[2].style.marginBottom = conH+15+"px"; 
-                      setTimeout(() => {
-                        _per[2].classList.add("border");
-                      },5);
-                    }
-
-                    if (_per[3]) {
-                      _per[3].style.marginBottom = conH+15+"px"; 
-                      setTimeout(() => {
-                        _per[3].classList.add("border");
-                      },5);
-                    }
-
-               } else if (id === 4 || id === 5){
-                    
-                    if (_per[4]) {
-                      _per[4].style.marginBottom = conH+15+"px"; 
-                      setTimeout(() => {
-                        _per[4].classList.add("border");
-                      },5);
-                    }
-
-                    if (_per[5]) {
-                      _per[5].style.marginBottom = conH+15+"px"; 
-                      setTimeout(() => {
-                        _per[5].classList.add("border");
-                      },5);
-                    }
-
-                    if (_per[3]) {
-                      _per[3].style.marginBottom = conH+15+"px"; 
-                      setTimeout(() => {
-                        _per[3].classList.add("border");
-                      },5);
-                    }
-
-               } else if (id === 6 || id === 7){
-
-                    if (_per[6]) {
-                      _per[6].style.marginBottom = conH+15+"px"; 
-                      setTimeout(() => {
-                        _per[6].classList.add("border");
-                      },5);
-                    }
-
-                    if (_per[7]) {
-                      _per[7].style.marginBottom = conH+15+"px"; 
-                      setTimeout(() => {
-                        _per[7].classList.add("border");
-                      },5);
-                    }
-
-               }
-
-          } else if (this.$mq === "phablet"){
-         
-             if (id === 0 || id === 1 || id === 2){
-               
-               if (_per[0]) {
-                  _per[0].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[0].classList.add("border");
-                  },5);
-                }
-
-                if (_per[1]) {
-                  _per[1].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[1].classList.add("border");
-                  },5);
-                }
-
-                if (_per[2]) {
-                  _per[2].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[2].classList.add("border");
-                  },5);
-                }
-
-             } else if (id === 3 || id === 4 || id === 5){
-
-               if (_per[3]) {
-                  _per[3].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[3].classList.add("border");
-                  },5);
-                }
-
-                if (_per[4]) {
-                  _per[4].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[4].classList.add("border");
-                  },5);
-                }
-
-                if (_per[5]) {
-                  _per[5].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[5].classList.add("border");
-                  },5);
-                }
-
-             } else if (id === 6 || id === 7 ){
-
-                if (_per[6]) {
-                  _per[6].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[6].classList.add("border");
-                  },5);
-                }
-
-                if (_per[7]) {
-                  _per[7].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[7].classList.add("border");
-                  },5);
-                }
-
-             }
-
-          } else if (this.$mq === "tablet"){
-         
-             if (id === 0 || id === 1 || id === 2 || id === 3){
-               
-                if (_per[0]) {
-                  _per[0].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[0].classList.add("border");
-                  },5);
-                }
-
-                if (_per[1]) {
-                  _per[1].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[1].classList.add("border");
-                  },5);
-                }
-
-                if (_per[2]) {
-                  _per[2].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[2].classList.add("border");
-                  },5);
-                }
-
-                if (_per[3]) {
-                  _per[3].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[3].classList.add("border");
-                  },5);
-                }
-
-             } else if (id === 4 || id === 5 || id === 6 || id === 7){
-
-                if (_per[4]) {
-                  _per[4].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[4].classList.add("border");
-                  },5);
-                }
-
-                if (_per[5]) {
-                  _per[5].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[5].classList.add("border");
-                  },5);
-                }
-
-                if (_per[6]) {
-                  _per[6].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[6].classList.add("border");
-                  },5);
-                }
-
-                if (_per[7]) {
-                  _per[7].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[7].classList.add("border");
-                  },5);
-                }
-
-             } 
-
-          } else if (this.$mq === "desktop"){
-            
-            if (id === 0 || id === 1 || id === 2 || id === 3 || id === 4){
-              
-               if (_per[0]) {
-                  _per[0].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[0].classList.add("border");
-                  },5);
-                }
-
-                if (_per[1]) {
-                  _per[1].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[1].classList.add("border");
-                  },5);
-                }
-
-                if (_per[2]) {
-                  _per[2].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[2].classList.add("border");
-                  },5);
-                }
-
-                if (_per[3]) {
-                  _per[3].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[3].classList.add("border");
-                  },5);
-                }
-
-                if (_per[4]) {
-                  _per[4].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[4].classList.add("border");
-                  },5);
-                }
-
-            } else if (id === 5 || id === 6 || id === 7){
-              
-                if (_per[5]) {
-                  _per[5].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[5].classList.add("border");
-                  },5);
-                }
-
-                if (_per[6]) {
-                  _per[6].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[6].classList.add("border");
-                  },5);
-                }
-
-                if (_per[7]) {
-                  _per[7].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[7].classList.add("border");
-                  },5);
-                }
-
-            } 
-
-          } else if (this.$mq === "monitor"){
-
-            if (id === 0 || id === 1 || id === 2 || id === 3 || id === 4 || id === 5){
-
-               if (_per[0]) {
-                  _per[0].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[0].classList.add("border");
-                  },5);
-                }
-
-                if (_per[1]) {
-                  _per[1].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[1].classList.add("border");
-                  },5);
-                }
-
-                if (_per[2]) {
-                  _per[2].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[2].classList.add("border");
-                  },5);
-                }
-
-                if (_per[3]) {
-                  _per[3].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[3].classList.add("border");
-                  },5);
-                }
-
-                if (_per[4]) {
-                  _per[4].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[4].classList.add("border");
-                  },5);
-                }
-
-                if (_per[5]) {
-                  _per[5].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[5].classList.add("border");
-                  },5);
-                }
-
-            } else if (id === 6 || id === 7){
-
-                if (_per[6]) {
-                  _per[6].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[6].classList.add("border");
-                  },5);
-                }
-
-                if (_per[7]) {
-                  _per[7].style.marginBottom = conH+15+"px"; 
-                  setTimeout(() => {
-                    _per[7].classList.add("border");
-                  },5);
-                }
-            } 
-          
-          }
-
-          perY = per.offsetTop; 
-          _per[id].querySelectorAll(".info")[0].style.top = perH + perY - 15 + "px"
-
-      } 
-
-    }
-  },
-  mounted() {
-      if (process.client) {
-        if (document.querySelector('.nuxt-link-handler')){
-          document.querySelector('.nuxt-link-handler').addEventListener('click', event => {
-            event.preventDefault()
-            this.$router.push(event.target.pathname)
-          })
-        }
-      }
-    },
 }
 </script>
 
 <style lang="scss">
 
   .slice-practise-areas{
+
+    .practise-dropdown {
+      background-color: blue;
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          list-style-type: none;
+          margin: 0 0 4px 0;
+          padding: 0;
+          &.-active {
+            height: 200px;
+          }
+          a {
+            text-decoration: underline;
+            color: $black;
+            // display: none;
+            &:hover {
+              color: $grey;
+            }
+            &.nuxt-link-active {
+              display: block;
+              background-color: red;
+            }
+          }
+        }
+      }
+    }
 
     p {
       margin: 0;

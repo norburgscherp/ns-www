@@ -8,6 +8,7 @@
 
   .logo {
     fill: $black;
+    transition: fill .234s ease-out;
   }
 
 </style>

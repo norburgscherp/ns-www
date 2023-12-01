@@ -1,6 +1,8 @@
 <template>
-  <div :class="{'-menu-open': this.$store.getters.GET_MENU, '-portrait': this.orientation === 'p', '-landscape': this.orientation === 'l'}">  
+  <div :class="{'-startpage': $nuxt.$route.name === 'index___sv' || $nuxt.$route.name === 'index___en', '-menu-open': this.$store.getters.GET_MENU, '-portrait': this.orientation === 'p', '-landscape': this.orientation === 'l'}">
+    <div class="site-header-plate"></div>
     <site-header/>
+    <site-header-menu/>
     <nuxt />
     <site-footer/>
   </div>
@@ -8,11 +10,13 @@
 
 <script>
 import SiteHeader from '~/components/SiteHeader.vue'
+import SiteHeaderMenu from '~/components/SiteHeaderMenu.vue'
 import SiteFooter from '~/components/SiteFooter.vue'
 
 export default {
   components: {
     SiteHeader,
+    SiteHeaderMenu,
     SiteFooter
   },
   head () {
@@ -69,3 +73,23 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+
+.-startpage {
+  .site-header-plate {
+    background-color: transparent;
+  }
+}
+
+.site-header-plate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background-color: $white;
+  z-index: 800;
+}
+
+</style>

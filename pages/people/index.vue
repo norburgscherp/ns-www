@@ -9,9 +9,9 @@
     </section>
 
 
-    <section class="slice-persons" v-match-heights="{el: ['.slice-persons .person'] }">
+    <section class="slice-persons row" v-match-heights="{el: ['.slice-persons .person'] }">
    
-      <div v-for="(person, index) in persons" :key="person.id" class="person" >
+      <div v-for="(person, index) in persons" :key="person.id" class="person col" >
   
           <!-- IMAGE -->
           <figure v-if="person.data.image.url">
@@ -108,15 +108,32 @@ export default {
 .site-page-people {
   
   .slice-persons {
-    margin: 0 -7px; 
-    position: relative;
+    &.row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+      @media screen and (max-width: $bp-768)  {
+        margin-right: -8px;
+        margin-left: -8px;
+      }
+    }
 
-    .person {
-      width: 50%;
-      float: left;
-      padding: 0 7px 25px;
-      @include VP768 {
-        width: 33.3%;
+    .col {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      position: relative;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    @media screen and (max-width: $bp-768)  {
+      .col {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-right: 8px;
+        padding-left: 8px;
       }
     }
   }

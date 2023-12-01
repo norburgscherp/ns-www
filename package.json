@@ -27,9 +27,9 @@
     "vue-mq": "^1.0.1"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
     "nodemon": "^2.0.2",
-    "sass-loader": "^8.0.2",
+    "sass": "^1.69.5",
+    "sass-loader": "^7.0.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.41.5"
   }

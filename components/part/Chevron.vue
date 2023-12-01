@@ -1,0 +1,13 @@
+<template>
+  <div class="chevron">
+    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><path d="M256 82.7l22.6 22.6 192 192L493.3 320 448 365.3l-22.6-22.6L256 173.3 86.6 342.6 64 365.3 18.7 320l22.6-22.6 192-192L256 82.7z"/></svg>
+  </div>
+</template>
+
+<style lang="scss">
+
+  .chevron {
+    fill: $black;
+  }
+
+</style>

@@ -35,26 +35,40 @@
       .header > * {
         font-weight: 200;
         font-size: 15px;
-        letter-spacing: .1em;
+        letter-spacing: 0.1em;
         font-family: $font-copper;
-        margin: 0;
+        margin: 0 0 4px 0;
         text-transform: uppercase;
         display: inline-block;
+        width: 100%;
+        text-align: center;
       }
       .text {
+        h2 {
+          font-weight: 200;
+          font-size: 15px;
+          letter-spacing: 0.1em;
+          font-family: $font-copper;
+          margin: 0 0 4px 0;
+          text-transform: uppercase;
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+        }
         font-size: 20px;
         font-family: $font-caslon;
         line-height: 1.4;
         p {
-          margin: 0;
-          + p {
-            text-indent: 30px;
-          } 
+          margin: 0 0 32px 0;
+          text-align: justify;
         }
-        // i,em {
-        //   font-family: $font-caslon;
-        //   font-style: italic;
-        // }
+        i,em {
+          font-size: 20px;
+          font-family: $font-caslon-italics;
+          font-style: normal !important;
+          letter-spacing: -1px;
+          margin-bottom: 0px;
+        }
       }
     }
 
@@ -65,45 +79,13 @@
       }
     }
 
-    @include VP600 {
+    @include VP768 {
       .slice-image {
         margin-bottom: 30px;
       }
       .row {
         @include clearfix();
-        margin:0 -8px;
-      }
-      .col { 
-        width: 50%;
-        float: left;
-        padding: 0 8px;
-      }
-
-      &.slice-about,
-      &.slice-career {
-        .col { 
-          float: none;
-          padding: 0;
-        }
-        .slice-image {
-          @include aspect-ratio-img(28,5);
-        }
-        .col-1 {
-          width: 100%;
-          max-width: 1400px;
-          margin: 0 auto;
-        }
-        .col-2 {
-          width: 80%;
-          max-width: 800px;
-          margin: 0 auto;
-        }
-      }
-
-    }
-
-    @include VP768 {
-      .row {
+        // margin:0 -8px;
         margin: 0 -15px;
       }
       .col { 
@@ -111,9 +93,6 @@
         float: left;
         padding: 0 15px;
       }
-
-
-
     }
 
     @include VP1024 {
@@ -136,6 +115,7 @@
 .slice-headers {
   
   text-align: center;
+  margin-top: 128px;
 
   .header {
     h1,
@@ -152,9 +132,7 @@
       border-top: 1px solid $black;
       padding: 8px 0 6px;
       letter-spacing: .1em;
-     
       width: 100%;
-     
       line-height: 1
     }   
   }
@@ -167,8 +145,7 @@
         padding-left: 30px;
         padding-right: 30px;
         white-space: nowrap;
-        min-width: 380px;
-        width: auto
+        width: 100%;
       }
     }
   }
@@ -181,7 +158,7 @@
 .slice-persons {
   @include clearfix();
   @include VP480 {
-    margin: 0 -8px; 
+    // margin: 0 -8px;
   }
 
   .person{
@@ -246,17 +223,17 @@
     }
 
     @include VP480 {
-      width: 50%;
-      float: left;
-      padding: 0 8px 20px;
+      // width: 50%;
+      // float: left;
+      // padding: 0 8px 20px;
     }
 
     @include VP768 {
-      width: 33.333%;
+      // width: 33.333%;
     }
 
     @include VP1024 {
-      width: 25%;
+      // width: 25%;
     }
 
     @include VP1280 {

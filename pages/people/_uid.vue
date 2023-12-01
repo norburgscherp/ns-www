@@ -364,7 +364,7 @@ export default {
 
   
   .person {
-    margin-top: 15px; 
+    margin-top: 128px;
     margin-bottom: 20px;
     text-align: left;
     max-width: 860px;
@@ -556,7 +556,11 @@ export default {
     }
 
     @include VP1280 {
-      margin-top: 30px; 
+      margin-top: 128px;
+    }
+
+    @media screen and (max-width: $bp-480)  {
+      margin-top: 112px;
     }
 
   }
