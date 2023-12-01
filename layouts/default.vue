@@ -1,6 +1,7 @@
 <template>
   <div :class="{'-menu-open': this.$store.getters.GET_MENU, '-portrait': this.orientation === 'p', '-landscape': this.orientation === 'l'}">  
     <site-header/>
+    <site-header-menu/>
     <nuxt />
     <site-footer/>
   </div>
@@ -8,11 +9,13 @@
 
 <script>
 import SiteHeader from '~/components/SiteHeader.vue'
+import SiteHeaderMenu from '~/components/SiteHeaderMenu.vue'
 import SiteFooter from '~/components/SiteFooter.vue'
 
 export default {
   components: {
     SiteHeader,
+    SiteHeaderMenu,
     SiteFooter
   },
   head () {

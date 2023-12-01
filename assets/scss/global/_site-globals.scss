@@ -76,38 +76,58 @@ em {
 // - -  SITE
 
 .site-width {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding-left: 15px; 
-  padding-right: 15px; 
+  padding-left: 48px; 
+  padding-right: 48px; 
+  overflow-x: hidden;
+  position: relative;
   min-width: 300px;
 
-  @media screen and (min-width: 768px)  {
-    padding-left: 25px; 
-    padding-right: 25px;  
+  @media screen and (max-width: 1920px)  {
+    max-width: 1440px;
+    // padding-left: 25px; 
+    // padding-right: 25px;  
   }
 
-  // 1280px
-  @media screen and (min-width: 1280px)  {
-    padding-left: 40px; 
-    padding-right: 40px; 
+  @media screen and (max-width: 1440px)  {
+    max-width: 1280px;
+    padding-left: 48px;
+    padding-right: 48px;
   }
+
+  @media screen and (max-width: 480px)  {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media screen and (max-width: 370px)  {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  // 1280px - Removed for new header
+  // @media screen and (min-width: 1280px)  {
+  //   padding-left: 40px; 
+  //   padding-right: 40px; 
+  // }
 
 }
 
 .site-content-width {
-  max-width: 800px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 
 [class*="site-page"]  {
-  padding-top: 80px;
+  //Removed for new header
+  // padding-top: 80px;
 
-  // 1280px
-  @media screen and (min-width: 1280px)  {
-   padding-top: 133px;
-  }
+  // 1280px -- Removed for new header
+  // @media screen and (min-width: 1280px)  {
+  //  padding-top: 133px;
+  // }
 
 }
 

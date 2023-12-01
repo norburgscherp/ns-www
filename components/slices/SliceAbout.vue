@@ -1,70 +1,39 @@
 <template>
   <section class="slice-about slice-layout-two-col">
-
-
     <div class="slice-body row">
-
-       <!-- COL-1 -->
+      <!-- COL-1 -->
       <div class="col-1 col">
-
         <!-- IMAGE -->
-
         <figure class="slice-image">
-
-          <mq-layout mq="mobile">
-            <prismic-image :field="slice.primary.image"/>
-          </mq-layout>
-          <mq-layout mq="phablet+">
-            <prismic-image :field="slice.primary.image_2"/>
-          </mq-layout>
-          
+          <prismic-image :field="slice.primary.image"/>
         </figure>
-        
       </div>
-
       <!-- COL-2 -->
       <div class="col-2 col">
-
         <!-- TEXT -->
         <div class="slice-text">
-
           <prismic-rich-text class="text" :field="slice.primary.text"/>
-
+          
           <!-- ACCORDION - SAID -->
-          <div class="slice-accordion">
-
-           
+<!--           <div class="slice-accordion">
             <div class="acoordion-item -said">
-
-              
               <section class="accordion-header" @click="showSaid = !showSaid" :class="{'-active' : showSaid}">
                 <prismic-rich-text class="header" :field="slice.primary.accordions_1_header"/>
               </section>
-              
               <template v-if="showSaid === true">
                 <div class="text-general">
                   <prismic-rich-text :field="slice.primary.general"/>
                 </div>
-
                 <div class="text-said" v-for="(item,index) in slice.items" :key="item+index" >
                   <prismic-rich-text :field="item.said"/>
                   <div class="who"><prismic-rich-text :field="item.who"/></div> 
                 </div>
               </template>
-
-              
-
             </div>
-
-            
             <div class="acoordion-item -link">
-
-              
               <section class="accordion-header" @click="showLinks = !showLinks" :class="{'-active' : showLinks}">
                 <prismic-rich-text class="header" :field="slice.primary.accordion_2_header"/>
               </section>
-
-                
                 <template v-if="showLinks === true && $i18n.locale === 'en'">
                   <ul>
                     <li v-for="(link,index) in this.$store.getters.GET_MENU_EN[1].items" :key="link+index">
@@ -72,34 +41,18 @@
                     </li>
                   </ul>
                 </template>
-
                 <template v-if="showLinks === true && $i18n.locale === 'sv'">
                   <ul>
                     <li v-for="(link,index) in this.$store.getters.GET_MENU_SV[1].items" :key="link+index">
                       <nuxt-link :to="$prismic.asLink(link.link)">{{link.sub_menu_link_label[0].text}}</nuxt-link>
                     </li>
                   </ul>
-             
-
                 </template>
-                  
-
-   
-
-
-
-              
             </div>
-            
-          </div>
-
-
+          </div> -->
         </div>
-        
       </div>
-
     </div>
-
   </section>
 </template>
 

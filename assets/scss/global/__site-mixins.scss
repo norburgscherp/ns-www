@@ -25,6 +25,8 @@
 // -> @include aspect-ratio-img(16,9)
 /////////////////////////////////////////////////////////////////////////
 
+@use "sass:math";
+
 @mixin aspect-ratio($width, $height) {
     position: relative;
     overflow: hidden;
@@ -34,7 +36,7 @@
         display: block;
         content: " ";
         width: 100%;
-        padding-top: ($height / $width) * 100%;
+        padding-top: math.div($height, $width) * 100%;
     }
 
     .ratio {
@@ -57,7 +59,7 @@
         display: block;
         content: " ";
         width: 100%;
-        padding-top: ($height / $width) * 100%;
+        padding-top: math.div($height, $width) * 100%;
     }
 
     .body {
@@ -80,7 +82,7 @@
         display: block;
         content: " ";
         width: 100%;
-        padding-top: ($height / $width) * 100%;
+        padding-top: math.div($height, $width) * 100%;
     }
 
     img {
@@ -103,7 +105,7 @@
         display: block;
         content: " ";
         width: 100%;
-        padding-top: ($height / $width) * 100%;
+        padding-top: math.div($height, $width) * 100%;
     }
 
     iframe {

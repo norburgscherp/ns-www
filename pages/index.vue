@@ -1,5 +1,5 @@
 <template>
-  <section class="site-page-startpage site-width">
+  <section class="site-page-startpage">
 
     <!-- Banner - Part -->
     <banner :banner="banner"/>
@@ -9,7 +9,7 @@
 
 <script>
 
-import Banner from '~/components/part/StartpageBanner.vue'
+import Banner from '~/components/part/StartpageBannerNew.vue'
 
 export default {
   name: 'Home',
@@ -29,7 +29,7 @@ export default {
       }
     
       return {
-        banner: startpage.startpage_banner[0]
+        banner: startpage.startpage_banner_2[0]
       }
 
     } catch (e) {
