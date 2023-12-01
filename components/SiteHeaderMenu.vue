@@ -1,29 +1,5 @@
 <template>
   <div class="site-header-menu">
-    
-    <div class="header-menu-nav">
-      <ul>
-        <!-- Language switcher -->
-        <li class="langs">
-          <template v-if="$i18n.locale !== 'sv'">
-            <nuxt-link :to="switchLocalePath('sv')">SV</nuxt-link>
-          </template>
-          <template v-if="$i18n.locale !== 'en'">
-            <nuxt-link :to="switchLocalePath('en')">EN</nuxt-link>
-          </template>
-        </li>
-
-        <!-- Hamburger menu -->
-        <li class="menu-toggle" @click="toggleMobileMenu">
-          <div class="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </li>
-
-      </ul>
-    </div>
 
     <div class="menu">
         <ul>
@@ -156,16 +132,15 @@ export default {
   position: fixed;
   right: 0;
   top: 0;
+  z-index: 800;
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
   transition: transform .4s ease;
-  width: 34vw;
-  z-index: 1000;
 
   .menu {
     width: 100%;
     height: 100%;
-    padding: 128px 80px;
+    padding: 128px 128px 128px 80px;
     ul {
       list-style-type: none;
       margin: 0;
@@ -181,10 +156,8 @@ export default {
           font-weight: 200;
           font-size: 28px;
           color: $white;
-          // margin: 0;
           text-transform: uppercase;
           transition: all .275s ease-out;
-          // padding: 12px 40px 8px 40px;
           letter-spacing: .1em;
           line-height: 1;
           &:hover {
@@ -193,6 +166,12 @@ export default {
           }
         }
       }
+    }
+  }
+
+  @include VP1920 {
+    .menu {
+      width: 30vw;
     }
   }
 
@@ -234,7 +213,6 @@ export default {
   }
 
   .header-menu-nav {
-    // background-color: blue;
     position: absolute;
     top: 60px;
     right: 48px;
@@ -253,10 +231,8 @@ export default {
           font-weight: 200;
           font-size: 28px;
           color: $white;
-          // margin: 0;
           text-transform: uppercase;
           transition: all .275s ease-out;
-          // padding: 12px 40px 8px 40px;
           letter-spacing: .1em;
           line-height: 1;
           &:hover {
@@ -279,7 +255,6 @@ export default {
 
   // - - Menu toggle
   .menu-toggle {
-    z-index: 5;
     box-sizing: content-box;
     margin-bottom: 8px;
 
@@ -288,7 +263,6 @@ export default {
       width: 34px;
       text-align: center;
       cursor: pointer;
-      z-index: 5;
 
       span {
         height: 2px;
@@ -339,10 +313,8 @@ export default {
       ul {
         li {
           margin-bottom: 16px;
-          span {
-            a {
-              font-size: 18px;
-            }
+          a {
+            font-size: 18px;
           }
         }
       }

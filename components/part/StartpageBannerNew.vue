@@ -117,6 +117,7 @@ export default {
 
   @media screen and (max-width: $bp-768)  {
     .banner-wrapper {
+      margin-bottom: 240px;
       h3 {
         font-size: 28px;
       }

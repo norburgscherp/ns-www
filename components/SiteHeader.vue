@@ -138,13 +138,14 @@ export default {
 <style lang="scss">
 
 .site-header {
-  background-color: $white;
+  // background-color: $white;
   font-family: $font-copper;
   font-weight: normal;
   position: fixed;
-  padding: 48px 0 16px 0;
+  padding: 48px 0 0 0;
   top: 0;
   width: 100%;
+  height: 120px;
   z-index: 1000;
   &.-startpage {
     background-color: transparent;
@@ -223,13 +224,6 @@ export default {
       }
     }
   }
-
-  .site-page-startpage & {
-    body & {
-      background-color: blue;
-    }
-  }
-
   
   .-menu-open & {
     body & {
@@ -270,7 +264,7 @@ export default {
       }
       @media screen and (max-width: $bp-1024)  {
         .logo svg path {
-          // fill: $white;
+          fill: $white;
         }
       }
     }
@@ -352,145 +346,6 @@ export default {
       max-width: 200px;
     }
   }
-
-  @include VP768 {
-    // .langs {
-    //   right: 25px;
-    // }
-    // .menu-toggle {
-    //   left: 10px;
-    // }
-  }
-
-
-
-  @include VP1280 {
-    // height: 133px;
-    // .logo {
-    //   margin-top: 26px;
-    //   svg {
-    //     height: 58px;
-    //     width: 450px;
-    //     margin-top: 0;
-    //   }
-    // }
-
-    // .langs {
-    //   // right: 40px;
-    //   // top: 78px;
-    //   background-color: grey;
-    //   a {
-    //     font-size: 15px;
-    //     letter-spacing: .1em;
-    //     text-transform: uppercase;
-    //   }
-    // }
-
-    // .menu {
-    //   background-color: brown;;
-    //   // background-color: $white;
-    //   overflow: visible;
-    //   height: auto;
-    //   display: flex;
-    //   // display: block;
-    //   visibility: visible;
-    //   opacity: 1;
-    //   // padding: 14px 28px 28px
-    //   padding: 0;
-    //   height: auto;
-    //   // top: 58px;
-    //   align-items: center;
-    //   justify-content: flex-end;
-
-      // > ul {
-      //   display: block;
-      //   padding-top: 0;
-      //   padding-bottom: 0;
-      //   > li >  span a, 
-      //   > li > div {
-      //     // border-left: 1px solid $grey;
-      //     padding: 0 12px;
-      //   }
-      //   > li {
-      //     &:first-child {
-      //       > span a,
-      //       > div {
-      //         // border: none;
-      //       } 
-      //     }
-      //   }
-      // }
-
-      // ul a,
-      // ul div  {
-      //   // border: none;
-      // }
-      // > ul {
-      //   margin: 0;
-      //  // border-top: none;
-      // }
-
-      // li {
-      //   display: inline-block;
-      //   padding: 14px 0;
-      //   li {
-      //     padding: 6px 0;
-      //     display: block;
-      //   }
-      // }
-      
-
-      // li.-show {
-      //   display: inline-block!important;
-      //   position: relative;
-
-      //   li {
-      //     padding: 0px 14px;
-      //   }
-
-      //   ul.sub {
-      //     position: absolute;
-      //     top: 48px;
-      //     left: 0px;
-      //     text-align: left;
-      //     padding: 8px 0 12px;
-      //     &:before {
-      //       content: '';
-      //       position: absolute;
-      //       background-color: rgba(248,248,248, .97);
-      //       top: 0;
-      //       left: -80vw;
-      //       height: 100%;
-      //       width: 200vw;
-      //       z-index: -1;
-      //     }
-      //     a {
-      //       white-space: nowrap;
-      //       padding: 5px 0;
-      //       &:hover {
-      //         color: $black;
-      //       }
-      //     }
-      //   }
-      // }
-
-      // li.-active {
-      //   > div {
-      //     font-weight: 200;
-      //     &:hover {
-      //       font-weight: 200;
-      //     }
-      //   }
-      // }
-      
-      
-
-    }
-
-    // .menu-toggle {
-    //   display: none;
-    // }
-  //}
 
 }
  
