@@ -38,20 +38,32 @@
           <div class="details">
 
             <!-- EMAIL -->
-            <template v-if="doc.email.length > 0">
-              {{ $t('ns.email') }}: <a :href="'mailto:' + doc.email[0].text" target="_blank">{{doc.email[0].text}}</a> <br>
+            <template v-if="doc.email">
+              <template v-if="doc.email.length > 0 && doc.email[0].text">
+                {{ $t('ns.email') }}: <a :href="'mailto:' + doc.email[0].text" target="_blank">{{doc.email[0].text}}</a> <br>
+              </template>
             </template>
 
             <!-- TEL-->
-            <template v-if="doc.tel.length > 0">
-              {{ $t('ns.phone') }}: <a :href="'tel:' + doc.tel[0].text" target="_blank">{{doc.tel[0].text}}</a> <br>
+            <template v-if="doc.tel">
+              <template v-if="doc.tel.length > 0 && doc.tel[0].text">
+                {{ $t('ns.phone') }}: <a :href="'tel:' + doc.tel[0].text" target="_blank">{{doc.tel[0].text}}</a> <br>
+              </template>
             </template>
 
             <!-- MOBILE -->
-            <template v-if="doc.mobile.length > 0">
-              {{ $t('ns.mobile') }}: <a :href="'tel:' + doc.mobile[0].text" target="_blank">{{doc.mobile[0].text}}</a> <br>
+            <template v-if="doc.mobile">
+              <template v-if="doc.mobile.length > 0 && doc.mobile[0].text ">
+                {{ $t('ns.mobile') }}: <a :href="'tel:' + doc.mobile[0].text" target="_blank">{{doc.mobile[0].text}}</a> <br>
+              </template>
             </template>
 
+            <!-- DIRECT -->
+            <template v-if="doc.direct">
+              <template v-if="doc.direct.length > 0 && doc.direct[0].text">
+                {{ $t('ns.direct') }}: <a :href="'tel:' + doc.direct[0].text" target="_blank">{{doc.direct[0].text}}</a> <br>
+              </template>
+            </template>
             
             <div class="links">
             
@@ -76,9 +88,9 @@
           </div>
 
           <mq-layout :mq="['mobile', 'phablet', 'tablet']" class="person-info">
-                            <!-- BIOAGRAPHY -->
-              <template v-show="doc.biography.length > 0">
-                <div class="info-item" :class="{'-active' : showBio}">
+              <!-- BIOAGRAPHY -->
+              <template v-if="doc.biography.length > 0" >
+                <div class="info-item" :class="{'-active' : showBio}" v-if="doc.biography[0].text !== '' ">
                   <div class="info-item-header" @click="showBio = !showBio">{{ $t('ns.biography') }}</div>
                   <div class="info-item-text">
                     <prismic-rich-text :field="doc.biography"/>
@@ -87,8 +99,8 @@
               </template>
 
               <!-- EXPERIENCE -->
-              <template v-show="doc.experience.length > 0">
-                <div class="info-item" :class="{'-active' : showExp}">
+              <template v-if="doc.experience.length > 0" >
+                <div class="info-item" :class="{'-active' : showExp}" v-if="doc.experience[0].text !== '' ">
                   <div class="info-item-header" @click="showExp = !showExp">{{ $t('ns.experience') }}</div>
                   <div class="info-item-text">
                     <prismic-rich-text :field="doc.experience"/>
@@ -97,8 +109,8 @@
               </template>
 
               <!-- NOTABLE REPRESENTATIONS -->
-              <template v-show="doc.notable.length > 0">
-                <div class="info-item" :class="{'-active' : showNot}">
+              <template v-if="doc.notable.length > 0">
+                <div class="info-item" :class="{'-active' : showNot}" v-if="doc.notable[0].text !== '' ">
                   <div class="info-item-header" @click="showNot = !showNot">{{ $t('ns.notable') }}</div>
                   <div class="info-item-text">
                     <prismic-rich-text :field="doc.notable"/>
@@ -107,8 +119,8 @@
               </template>
 
               <!-- EDUCATION -->
-              <template v-show="doc.education.length > 0">
-                <div class="info-item" :class="{'-active' : showEdu}">
+              <template v-if="doc.education.length > 0">
+                <div class="info-item" :class="{'-active' : showEdu}" v-if="doc.education[0].text !== '' ">
                   <div class="info-item-header"  @click="showEdu = !showEdu" >{{ $t('ns.education') }}</div>
                   <div class="info-item-text">
                     <prismic-rich-text :field="doc.education"/>
@@ -117,8 +129,8 @@
               </template>
 
               <!-- MEMBERSHIPS -->
-              <template v-show="doc.memberships.length > 0">
-                <div class="info-item" :class="{'-active' : showMem}">
+              <template v-if="doc.memberships.length > 0">
+                <div class="info-item" :class="{'-active' : showMem}" v-if="doc.memberships[0].text !== '' ">
                   <div class="info-item-header" @click="showMem = !showMem">{{ $t('ns.memberships') }}</div>
                   <div class="info-item-text">
                     <prismic-rich-text :field="doc.memberships"/>
@@ -129,23 +141,42 @@
 
 
 
+
+
             <mq-layout mq="desktop+" class="person-info -desktop">
               <div class="info-tab-headers">
-                  <div class="info-item" :class="{'-active' : showBio}" v-if="doc.biography.length > 0">
+
+                <template v-if="doc.biography.length > 0">
+                  <div class="info-item" :class="{'-active' : showBio}" v-if="doc.biography[0].text !== '' ">
                     <div class="info-item-header" @click="reset(); showBio = !showBio">{{ $t('ns.biography') }}</div>
                   </div>
-                  <div class="info-item" :class="{'-active' : showNot}" v-if="doc.notable.length > 0">
+                </template>
+
+                <template v-if="doc.notable.length > 0">
+                  <div class="info-item" :class="{'-active' : showNot}" v-if="doc.notable[0].text !== '' ">
                     <div class="info-item-header" @click="reset(); showNot = !showNot">{{ $t('ns.notable') }}</div>
                   </div>
-                  <div class="info-item" :class="{'-active' : showExp}" v-if="doc.experience.length > 0">
+                </template>
+
+                <template v-if="doc.experience.length > 0">
+                  <div class="info-item" :class="{'-active' : showExp}" v-if="doc.experience[0].text !== '' ">
                     <div class="info-item-header" @click="reset(); showExp = !showExp">{{ $t('ns.experience') }}</div>
-                  </div>
-                  <div class="info-item" :class="{'-active' : showEdu}" v-if="doc.education.length > 0">
+                  </div>                    
+                </template >
+
+
+                <template v-if="doc.education.length > 0">
+                  <div class="info-item" :class="{'-active' : showEdu}" v-if="doc.education[0].text !== '' ">
                     <div class="info-item-header" @click="reset(); showEdu = !showEdu">{{ $t('ns.education') }}</div>
-                  </div>
-                  <div class="info-item" :class="{'-active' : showMem}" v-if="doc.memberships.length > 0">
+                  </div>                    
+                </template>
+
+                <template v-if="doc.memberships.length > 0">
+                  <div class="info-item" :class="{'-active' : showMem}" v-if="doc.memberships[0].text !== '' ">
                     <div class="info-item-header" @click="reset(); showMem = !showMem">{{ $t('ns.memberships') }}</div>
-                  </div>
+                  </div>                    
+                </template>
+
               </div>
               <div class="info-tab-content">
                 <div class="info-item-text" :class="{'-show' : showBio}">
@@ -175,26 +206,6 @@
           </div>
           
 
-
-          <!-- OLD -->
-
-
-         <!-- CONTACT -->
-<!--          <prismic-rich-text v-if="doc.contact.length > 0 "  class="contact" :field="doc.contact"/>
-          <div v-else class="contact">
-            <div>
-                ({{ $t('ns.no_contact') }})
-            </div>
-          </div>
- -->
-          <!-- Downloads -->
-          <!-- <prismic-rich-text v-if="doc.downloads.length > 0 "  class="downloads" :field="doc.downloads"/> -->
-
-          <!-- TEXT -->
-          <!-- <prismic-rich-text v-if="doc.text.length > 0 && !doc.text.length === '(text)' "  class="text person-text -hide-mobile" :field="doc.text"/> -->
-
-          <!-- DETAILS-->
-          <!-- <prismic-rich-text v-if="doc.details.length > 0 "  class="details text -hide-mobile" :field="doc.details"/>  -->
 
       </div>  
      
@@ -292,6 +303,11 @@ export default {
 <style lang="scss">
 
 .site-page-person {
+
+  ul {
+    padding-left: 12px;
+    margin-top: 0;
+  }
 
   .person-info {
     padding: 12px 0 32px;
@@ -507,7 +523,7 @@ export default {
       .info-item-header {
         border: none;
         font-size: 12px;
-        padding-right: 4px;
+        padding-right: 2px;
         &:hover { 
           color: $black;
         }

@@ -39,27 +39,3 @@ export default {
 
 </style>
 
-<!-- Prismic cusyom type - JSON -->
-
-<!-- 
-
-  "text" : {
-            "type" : "Slice",
-            "fieldset" : "Text",
-            "description" : "Text -> Bold, Italic and Lists",
-            "icon" : "text_fields",
-            "display" : "list",
-            "non-repeat" : {
-              "text" : {
-                "type" : "StructuredText",
-                "config" : {
-                  "multi" : "paragraph, strong, em, hyperlink, list-item, o-list-item, o-list-item",
-                  "allowTargetBlank" : true,
-                  "label" : "Text"
-                }
-              }
-            },
-            "repeat" : { }
-          },
-
---> 

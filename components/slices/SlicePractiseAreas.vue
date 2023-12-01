@@ -15,7 +15,7 @@
           <prismic-rich-text class="text" :field="slice.primary.text"/>
         </div>
       </div>
-    </div>
+    </div>     
   </section>
 </template>
 
@@ -219,6 +219,14 @@ export default {
             letter-spacing: .1em;
           }
 
+          span {
+            font-weight: bold;
+          }
+
+          a {
+            color: $black;
+          }
+
         }
 
       }
@@ -274,8 +282,8 @@ export default {
       }
       .quote-text {
         font-size: 32px;
-        font-family: $font-caslon;
-        font-style: italic;
+        font-family: $font-caslon-italic;
+        font-style: normal;
         letter-spacing: -1px;
         margin-bottom: 0px;
 

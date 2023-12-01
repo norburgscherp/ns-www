@@ -70,10 +70,15 @@
     }
 
     em, i {
-      font-family: $body-font;
-      font-style: italic;
+      font-family: $font-caslon-italic !important;
+      font-style: normal!important;
     }
 
+  }
+
+  em, i {
+    font-family: $font-caslon-italic !important;
+    font-style: normal!important;
   }
 
 

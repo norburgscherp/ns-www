@@ -1,13 +1,14 @@
 {
   "ns": {
     "biography": "Biography",
-    "notable": "Notable representation",  
+    "notable": "Notable representations",  
     "experience": "Experience",
     "education": "Education",
     "memberships": "Memberships", 
     "email": "Email",
     "phone": "Phone",
     "mobile": "Mobile",
+    "direct": "Direct",
     "cv": "Download cv",
     "more_info": "More info",
     "read_more": "Read more",
