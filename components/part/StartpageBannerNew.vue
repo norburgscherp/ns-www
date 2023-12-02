@@ -82,7 +82,7 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 128px;
+    margin-bottom: 320px;
     h3 {
       text-align: center;
     }
@@ -103,6 +103,22 @@ export default {
         text-decoration: none;
         border-color: $grey;
         color: $grey;
+      }
+    }
+  }
+
+  @media screen and (max-width: $bp-1920)  {
+    .banner-wrapper {
+      h3 {
+        font-size: 34px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $bp-1440)  {
+    .banner-wrapper {
+      h3 {
+        font-size: 28px;
       }
     }
   }

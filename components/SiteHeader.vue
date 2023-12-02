@@ -321,6 +321,9 @@ export default {
         &.menu-toggle {
           display: initial;
         }
+        &.langs {
+          display: initial; 
+        }
       }
     }
     .menu-toggle {
