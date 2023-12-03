@@ -26,12 +26,12 @@ export default {
 .slice-quotes{
   .slice-quotes-container {
     display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
+    flex-flow: column wrap;
+    align-items: center;
     justify-content: space-between;
     .quotes {
       margin-bottom: 32px;
-      width: 48%;
+      width: 60%;
       text-align: center;
       margin: 45px 0 45px; 
       .quote-text {
@@ -68,7 +68,7 @@ export default {
         }
       }
     }
-    @media screen and (max-width: $bp-480)  {
+    @media screen and (max-width: $bp-1024)  {
       .quotes {
         width: 100%;
       }
