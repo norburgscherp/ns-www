@@ -1,52 +1,54 @@
 <template>
+  
   <div class="site-header-menu">
-
     <div class="menu">
-        <ul>
-
-          <!-- *** *** EN *** *** -->
-
-          <template v-if="$i18n.locale === 'en'">
-
-            <li v-for="(item,index) in menuEn" :key="item+index" :class="{'-active': index === activeParentLink}"> 
-              <template v-elseif="item.primary.link.link_type !== 'Any' ">
-                <template v-if="item.primary.anchor">
-                  <prismic-link :field="item.primary.link">{{item.primary.label[0].text}}</prismic-link>
-                </template>
-                <template v-else>
-                  <span @click="cleanMenu()">
-                    <nuxt-link :to="$prismic.asLink(item.primary.link)">{{item.primary.label[0].text}}</nuxt-link> 
-                  </span>
-                </template>
-              </template>
-
-            </li> 
-
-          </template>
-
-
-          <!-- *** *** SV *** *** -->
-
-          <template v-if="$i18n.locale === 'sv'">
-
-            <li v-for="(item,index) in menuSv" :key="'sv'+item+index" :class="{'-active': index === activeParentLink}"> 
-              
+      <ul>
+        
+        <!-- *** *** EN *** *** -->
+        <template v-if="$i18n.locale === 'en'">
+          <li v-for="(item,index) in menuEn" :key="item+index" :class="{'-active': index === activeParentLink}"> 
+            <template v-elseif="item.primary.link.link_type !== 'Any' ">
               <template v-if="item.primary.anchor">
-                  <prismic-link :field="item.primary.link">{{item.primary.label[0].text}}</prismic-link>
-                </template>
-                <template v-else>
-                  <span @click="cleanMenu()">
-                    <nuxt-link :to="$prismic.asLink(item.primary.link)">{{item.primary.label[0].text}}</nuxt-link> 
-                  </span>
-                </template>
+                <prismic-link :field="item.primary.link">{{item.primary.label[0].text}}</prismic-link>
+              </template>
+              <template v-else>
+                <span @click="cleanMenu()">
+                  <nuxt-link :to="$prismic.asLink(item.primary.link)">{{item.primary.label[0].text}}</nuxt-link> 
+                </span>
+              </template>
+            </template>
+          </li> 
+        </template>
+        
+        <!-- *** *** SV *** *** -->
+        <template v-if="$i18n.locale === 'sv'">
+          <li v-for="(item,index) in menuSv" :key="'sv'+item+index" :class="{'-active': index === activeParentLink}"> 
+            <template v-if="item.primary.anchor">
+              <prismic-link :field="item.primary.link">{{item.primary.label[0].text}}</prismic-link>
+            </template>
+            <template v-else>
+              <span @click="cleanMenu()">
+                <nuxt-link :to="$prismic.asLink(item.primary.link)">{{item.primary.label[0].text}}</nuxt-link> 
+              </span>
+            </template>
+          </li>
+        </template>
 
-            </li>
+      </ul>
+    </div>
 
-          </template>
+    <!-- Language switcher -->
+    <div class="langs">
+      <template v-if="$i18n.locale !== 'sv'">
+        <nuxt-link :to="switchLocalePath('sv')">SV</nuxt-link>
+      </template>
+      <template v-if="$i18n.locale !== 'en'">
+        <nuxt-link :to="switchLocalePath('en')">EN</nuxt-link>
+      </template>
+    </div>
 
-        </ul>
-      </div>
   </div>
+
 </template>
 
 <script>
@@ -169,6 +171,29 @@ export default {
     }
   }
 
+  .langs {
+    position: absolute;
+    bottom: 32px;
+    left: 48px;
+    a {
+      display: block;
+      text-decoration: none;
+      font-size: 20px;
+      line-height: 1.1;
+      font-family: $font-copper;
+      text-transform: uppercase;
+      transition: all .275s ease-out;
+      letter-spacing: .1em;
+      font-weight: 200;
+      cursor: pointer;
+      padding: 12px 0 10px;
+      color: $white;
+      &:hover {
+        color: $grey;
+      }
+    }
+  }
+
   @include VP1920 {
     .menu {
       width: 30vw;
@@ -242,15 +267,6 @@ export default {
         }
       }
     }
-    .langs {
-      margin-right: 20px;
-      margin-top: -8px;
-      a {
-        font-size: 15px;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-      }
-    }
   }
 
   // - - Menu toggle
@@ -319,10 +335,16 @@ export default {
         }
       }
     }
+    .langs {
+      left: 32px;
+    }
   }
   @media screen and (max-width: $bp-370)  {
     .menu {
       padding: 128px 16px;
+    }
+    .langs {
+      left: 16px;
     }
   }
 }
