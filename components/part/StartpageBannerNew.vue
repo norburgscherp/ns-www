@@ -89,19 +89,19 @@ export default {
     .link {
       font-family: $font-copper;
       font-weight: 200;
-      font-size: 24px;
+      font-size: 15px;
       color: $black;
       margin: 0;
       text-transform: uppercase;
       transition: all .275s ease-out;
       border-bottom: 1px solid $black;
       border-top: 1px solid $black;
-      padding: 12px 40px 8px 40px;
+      padding: 16px 40px 12px 40px;
       letter-spacing: .1em;
       line-height: 1;
       &:hover {
         text-decoration: none;
-        border-color: $grey;
+        border-color: $black;
         color: $grey;
       }
     }
@@ -110,7 +110,7 @@ export default {
   @media screen and (max-width: $bp-1920)  {
     .banner-wrapper {
       h3 {
-        font-size: 38px;
+        font-size: 32px;
       }
     }
   }

@@ -40,7 +40,7 @@
 			<!-- Practise areas -->
 			<template v-else-if="slice.slice_type === 'practice_areas'">
 				<slice-practise-areas :slice="slice"/>
-			</template>  
+			</template>
 
 			<!-- Open Positions -->
 			<template v-else-if="slice.slice_type === 'open_positions'">

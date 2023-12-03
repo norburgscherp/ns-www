@@ -58,6 +58,9 @@
     color: $body-color;
     line-height: 1.3;
     font-size: 23px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
 
     // TABLET
     @include VP768  {
@@ -98,6 +101,9 @@
     word-break: break-word;
     text-transform: uppercase;
     letter-spacing: .1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
   }
 
   @include VP320  {
