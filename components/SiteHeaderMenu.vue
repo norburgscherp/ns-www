@@ -192,6 +192,9 @@ export default {
         color: $grey;
       }
     }
+    @media screen and (min-width: $bp-1024)  {
+      display: none;
+    }
   }
 
   @include VP1920 {
