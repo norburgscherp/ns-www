@@ -21,7 +21,7 @@
         <prismic-rich-text class="header" :field="slice.primary.service_title"/>
       </div>
     </section>
-    <div class="slice-body row">
+    <div id="pa" class="slice-body row">
       <!-- COL-1 -->
       <div class="col-1 col">
         <!-- IMAGE -->
@@ -32,7 +32,7 @@
       <!-- COL-2 -->
       <div class="col-2 col">
         <!-- TEXT -->
-        <div id="pa" class="slice-text">
+        <div class="slice-text">
           <PractiseMenu />
         </div>
       </div>
