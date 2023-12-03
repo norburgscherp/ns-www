@@ -138,7 +138,6 @@ export default {
 <style lang="scss">
 
 .site-header {
-  // background-color: $white;
   font-family: $font-copper;
   font-weight: normal;
   position: fixed;
@@ -223,6 +222,9 @@ export default {
         color: $grey;
       }
     }
+    .langs {
+      display: initial;
+    }
   }
   
   .-menu-open & {
@@ -265,6 +267,9 @@ export default {
       @media screen and (max-width: $bp-1024)  {
         .logo svg path {
           fill: $white;
+        }
+        .langs {
+          display: none;
         }
       }
     }
@@ -320,9 +325,6 @@ export default {
         display: none;
         &.menu-toggle {
           display: initial;
-        }
-        &.langs {
-          display: initial; 
         }
       }
     }

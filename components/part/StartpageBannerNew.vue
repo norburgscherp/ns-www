@@ -107,30 +107,6 @@ export default {
     }
   }
 
-  @media screen and (max-width: $bp-1920)  {
-    .banner-wrapper {
-      h3 {
-        font-size: 34px;
-      }
-    }
-  }
-
-  @media screen and (max-width: $bp-1440)  {
-    .banner-wrapper {
-      h3 {
-        font-size: 28px;
-      }
-    }
-  }
-
-  @media screen and (max-width: $bp-1024)  {
-    .banner-wrapper {
-      .link {
-        font-size: 18px;
-      }
-    }
-  }
-
   @media screen and (max-width: $bp-768)  {
     .banner-wrapper {
       margin-bottom: 240px;
