@@ -46,11 +46,21 @@ export default {
       margin: 0 0 4px 0;
 			padding: 0;
 			a {
-        text-decoration: underline;
-        color: $black;
-        &:hover {
-          color: $grey;
-        }
+        display: block;
+      	text-decoration: none;
+      	font-size: 15px;
+      	line-height: 1.1;
+      	font-family: $font-copper;
+      	text-transform: uppercase;
+      	transition: all .275s ease-out;
+      	letter-spacing: .1em;
+      	font-weight: 200;
+      	cursor: pointer;
+      	padding: 8px 0;
+      	color: $black;
+      	&:hover {
+        	color: $grey;
+      	}
 			}
 		}
 	}
