@@ -1,6 +1,6 @@
 <template>
  
-<div class="part-update" :class="[{'-truncate-text' : this.texCount > 192, '-truncate-text-show' : this.textShow}]">
+<div class="part-update" :class="[{'-truncate-text' : this.texCount > 60, '-truncate-text-show' : this.textShow}]">
 
     <figure :style="{ backgroundImage: 'url(' + part.image.url + ')', backgroundPosition: ''+ part.image_focus +'' }"></figure>
     <prismic-rich-text class="header" :field="part.header"/>
@@ -72,20 +72,11 @@ export default {
     &.-truncate-text {
 
       .text-part{ 
-     
         width: 100%;
-
-        
         /**Major Properties**/
         overflow: hidden;
-   
-        max-height: 224px;
+        max-height: 137px;
         -webkit-box-orient: vertical;
-        display: block;
-        display: -webkit-box;
-        overflow: hidden !important;
-        text-overflow: ellipsis;
-        -webkit-line-clamp: 7;
       }
 
       .read-more {
