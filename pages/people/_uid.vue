@@ -69,7 +69,7 @@
             
               <!-- CV -->
               <template v-if="doc.cv.name">
-                  <a :href="doc.cv.url" target="_blank">Ladda ner cv</a> <br>
+                  <a :href="doc.cv.url" target="_blank">CV</a> <br>
               </template>
 
               <!-- VCARD -->
